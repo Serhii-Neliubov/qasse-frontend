@@ -1,0 +1,143 @@
+.hero {
+  background-color: #FDF6FF;
+  padding: 150px 0 300px 0;
+  overflow: hidden;
+}
+
+.hero_container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.hero_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero_title {
+  max-width: 718px;
+  margin-bottom: 5px;
+  font-size: 58px;
+  color: #3C164F;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero_subtitle {
+  font-size: 20px;
+  max-width: 509px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero_description {
+  max-width: 816px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #555555;
+}
+
+.hero_button {
+  margin-top: 15px;
+}
+
+.hero_person_img {
+  position: absolute;
+  right: -50px;
+  bottom: -150px;
+  z-index: 10;
+}
+
+.hero_starLeft_img {
+  position: absolute;
+  left: -130px;
+  top: -120px;
+}
+
+.hero_starBetween_img {
+  position: absolute;
+  left: 675px;
+  bottom: -50px;
+}
+
+.hero_starRight_img {
+  position: absolute;
+  right: -150px;
+  top: -120px;
+}
+
+.hero_arrowRight_img {
+  position: absolute;
+  right: 340px;
+  bottom: -150px;
+}
+
+.hero_bottleImg_img {
+  position: absolute;
+  right: -520px;
+  top: -190px;
+}
+
+.hero_branchImg_img {
+  position: absolute;
+  right: 350px;
+  bottom: -30px;
+}
+
+.hero_rightBrunchImg_img {
+  position: absolute;
+  left: -250px;
+  bottom: -150px;
+}
+
+.hero_buttons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  &::after{
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: #3C164F;
+    position: absolute;
+    left: 150px;
+    top: 60%;
+  }
+}
+
+.hero_button{
+  padding: 15px 30px;
+  color: white;
+  background-color: #3C164F;
+  border: none;
+  font-weight: 500;
+  height: 54px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+}
+
+.hero_button_play {
+  margin-top: 15px;
+  border: none;
+  height: 54px;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  color: #3C164F;
+}
+
+.hero_button_play_img{
+  width: 54px;
+  height: 54px;
+  color: #3C164F;
+}
