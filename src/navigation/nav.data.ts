@@ -31,7 +31,7 @@ export const routes: IRoute[] = [
     },
     // auth
     {
-        path: '/contact-us',
+        path: '/login',
         element: Login,
     },
     {

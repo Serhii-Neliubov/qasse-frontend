@@ -5,9 +5,9 @@ import Navigation from "./navigation/Navigation.tsx";
 function App() {
 
   return (
-      <Provider store={store}>
-        <Navigation />
-      </Provider>
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   )
 }
 

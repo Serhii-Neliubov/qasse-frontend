@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": "../qasse-frontend2",
+    "baseUrl": ".",
     "paths": {
       "@components/*": [
         "src/components/*"
