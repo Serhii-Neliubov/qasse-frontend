@@ -3,14 +3,14 @@ import {Link} from "react-router-dom";
 
 import styles from "./Footer.module.scss";
 
-import contactsImg from "../../assets/footer/contacts.svg";
-import emailImg from "../../assets/footer/email.svg";
-import facebookImg from "../../assets/footer/facebook.svg";
-import instagramImg from "../../assets/footer/instagram.svg";
-import linkedinImg from "../../assets/footer/linkedin.svg";
-import phoneImg from "../../assets/footer/phone-call.svg";
-import twitterImg from "../../assets/footer/twitter.svg";
-import logoImg from "../../assets/footer/logo.svg";
+import contactsImg from "@assets/footer/contacts.svg";
+import emailImg from "@assets/footer/email.svg";
+import facebookImg from "@assets/footer/facebook.svg";
+import instagramImg from "@assets/footer/instagram.svg";
+import linkedinImg from "@assets/footer/linkedin.svg";
+import phoneImg from "@assets/footer/phone-call.svg";
+import twitterImg from "@assets/footer/twitter.svg";
+import logoImg from "@assets/footer/logo.svg";
 
 export default function Footer() {
     return (

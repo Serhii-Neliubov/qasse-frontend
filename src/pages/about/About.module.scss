@@ -1,4 +1,373 @@
-.container {
+.heroContent {
   max-width: 1350px;
   margin: 0 auto;
+  padding: 100px 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.heroContainer {
+  background-color: #FDF6FF;
+}
+
+.heroText {
+  max-width: 645px;
+
+  & > h1 {
+    margin-bottom: 15px;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 58px;
+    color: #3C164F;
+  }
+
+  & > p {
+    color: #555555;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+  }
+}
+
+.heroImg1 {
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+.heroImg2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.heroImg3 {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+
+.heroImg4 {
+  position: absolute;
+  top: -15px;
+  right: -120px;
+}
+
+.healthyContainer {
+  background-color: white;
+}
+
+.healthyContent {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 275px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.healthyTitle {
+  position: relative;
+  margin-bottom: 85px;
+
+  & > div {
+    display: flex;
+    color: #3C164F;
+    align-items: center;
+    font-size: 48px;
+    z-index: 10;
+    position: relative;
+    gap: 10px;
+  }
+
+  & > img {
+    position: absolute;
+    bottom: -70px;
+    left: 280px;
+  }
+}
+
+.healthyText {
+  & > p {
+    font-size: 16px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 20px;
+  }
+}
+
+.heroButtons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  &::after{
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: #3C164F;
+    position: absolute;
+    left: 150px;
+    top: 50%;
+  }
+}
+
+.heroButton{
+  padding: 15px 30px;
+  color: white;
+  background-color: #3C164F;
+  border: none;
+  font-weight: 500;
+  height: 54px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+}
+
+.heroButtonPlay {
+  border: none;
+  height: 54px;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  color: #3C164F;
+}
+
+.heroButtonPlayImg{
+  width: 54px;
+  height: 54px;
+  color: #3C164F;
+}
+
+.glowIntelligentlyContainer {
+    background-color: #FDF6FF;
+    padding-top: 120px;
+}
+
+.glowIntelligentlyContent {
+  max-width: 1350px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  & > h3 {
+    position: absolute;
+    bottom: -85px;
+    left: 70px;
+    font-size: 300px;
+    color: rgba(60, 22, 79, 0.25);
+    font-family: "Cormorant Garamond", sans-serif;
+  }
+}
+
+.glowIntelligentlyImg1 {
+  position: relative;
+  z-index: 10;
+}
+
+.glowIntelligentlyImg2 {
+  position: absolute;
+  left: -320px;
+  bottom: -90px;
+}
+
+.glowIntelligentlyText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 697px;
+
+  & > button {
+    margin-top: 15px;
+    padding: 15px 30px;
+    background-color: #3C164F;
+    color: white;
+    font-family: Poppins, sans-serif;
+    max-width: 200px;
+  }
+
+  & > h2 {
+    font-size: 58px;
+    max-width: 515px;
+    color: #3C164F;
+    font-family: "Cormorant Garamond", sans-serif;
+  }
+
+  & > p {
+    font-size: 16px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+  }
+}
+
+.surfaceLevelContainer {
+    background-color: white;
+}
+
+.surfaceLevelContent {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-top: 205px;
+  padding-bottom: 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.surfaceLevelText {
+  max-width: 1100px;
+  text-align: center;
+  margin: 0 auto;
+
+    & > h2 {
+      font-size: 58px;
+      color: #3C164F;
+      font-family: "Cormorant Garamond", sans-serif;
+      margin-bottom: 15px;
+    }
+
+    & > p {
+        font-size: 16px;
+        color: #555555;
+        font-family: Poppins, sans-serif;
+    }
+}
+
+.surfaceLevelBlocks {
+  display: flex;
+  gap: 20px;
+}
+
+.surfaceLevelBlock {
+  padding: 35px 25px;
+  background-color: #FDF6FF;
+}
+
+.surfaceLevelBlockContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 272px;
+  gap: 44px;
+
+  & > p {
+    font-size: 20px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+  }
+}
+
+.surfaceLevelBlockImg {
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  margin-left: 20px;
+
+  & > img {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+  }
+}
+
+.skincareOptimizerContainer {
+  background-color: #FDF6FF;
+  padding: 100px 0;
+}
+
+.skincareOptimizerText {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 580px;
+
+  & > h2 {
+    font-size: 58px;
+    color: #3C164F;
+    font-family: "Cormorant Garamond", sans-serif;
+  }
+
+  & > p {
+    font-size: 16px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+  }
+}
+
+.skincareOptimizerContent {
+  max-width: 1350px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > button {
+    padding: 15px 30px;
+    background-color: #3C164F;
+    color: white;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+  }
+}
+
+.joinOurCommunityContainer {
+  background-color: white;
+  padding: 140px 0;
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.joinOurCommunityContent {
+  width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+  padding: 100px;
+  position: absolute;
+  bottom: -140px;
+  right: 50%;
+  transform: translateX(50%);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+  background: rgb(255, 255, 255);
+
+  & > button {
+    padding: 15px 50px;
+    background-color: #3C164F;
+    color: white;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+  }
+}
+
+.joinOurCommunityText{
+    max-width: 610px;
+
+    & > h2 {
+        font-size: 50px;
+        color: #3C164F;
+        font-family: "Cormorant Garamond", sans-serif;
+      margin-bottom: 15px;
+    }
+
+    & > p {
+        font-size: 16px;
+        color: #555555;
+        font-family: Poppins, sans-serif;
+    }
 }
