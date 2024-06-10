@@ -37,6 +37,7 @@ export default function Login() {
                       <h1>Login</h1>
                       <input {...email} placeholder='Email'/>
                       <input {...password} placeholder='Password'/>
+                      <Link to='/reset-password' className={styles.forgotPasswordLink}>Forgot Password?</Link>
                       <button onClick={loginHandler}>Login</button>
                       <div className={styles.alreadyHaveAnAccount}>
                           <span>Don’t have an account?</span>
