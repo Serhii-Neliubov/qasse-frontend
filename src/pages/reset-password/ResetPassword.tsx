@@ -9,10 +9,10 @@ import personImage from '@assets/(auth)/person-img.svg';
 import flowers from '@assets/(auth)/flowers.svg';
 import leftParticlesImage from '@assets/(auth)/left-particle.svg';
 import rightParticlesImage from '@assets/(auth)/right-particle.svg';
+import leftBParticlesImage from "@assets/(auth)/left-b-particle.svg";
 
 import styles from './ResetPassword.module.scss';
 import {Link} from "react-router-dom";
-import leftBParticlesImage from "@assets/(auth)/left-b-particle.svg";
 
 export default function ResetPassword() {
     const email = useInput('');
@@ -39,7 +39,7 @@ export default function ResetPassword() {
                       <button onClick={resetPasswordHandler}>Send Reset Password</button>
                       <div className={styles.alreadyHaveAnAccount}>
                           <span>You remember your password?</span>
-                          <Link to='/registers' className={styles.link}>Login</Link>
+                          <Link to='/login' className={styles.link}>Login</Link>
                       </div>
                       <Link className={styles.termsOfUse} to='/privacy-policy'>Terms of Use | Privacy Policy</Link>
                   </form>
