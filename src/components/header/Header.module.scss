@@ -5,11 +5,15 @@
 }
 
 .navMenu {
+  width: 100%;
   max-width: 1350px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+li{
+  list-style: none;
 }
 
 .navList {
@@ -25,7 +29,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.navLink_active{
+.navLink_active {
   font-weight: 500;
   text-decoration: none;
   color: #5b006a;
@@ -66,10 +70,10 @@
   padding: 6px 15px;
   font-size: 14px;
   font-family: Poppins, sans-serif;
+}
 
-  &::placeholder {
-    color: #AAAAAA;
-  }
+.navSearch__input::placeholder {
+  color: #AAAAAA;
 }
 
 .navSearch__image_box {
@@ -81,8 +85,113 @@
   align-items: center;
 }
 
-.navSearch__image{
+.navSearch__image {
   height: 30px;
   width: 30px;
   color: white;
+}
+.secondMenu{
+ display: none;
+}
+.burger {
+  display: flex;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(28, 25, 60);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+}
+
+.burger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1180px) {
+  .navMenu {
+    display: none;
+    position: relative;
+  }
+  .burgerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navSearch__image_box {
+    background-color: #fff;
+  }
+
+  .navSearch__image {
+    height: 40px;
+    width: 40px;
+    color: rgb(28, 25, 60);
+  }
+
+  .secondMenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    width: 100%;
+  }
+  .burgerMenu {
+    position: absolute;
+    width: 30%;
+    top: 100px;
+    right: 10px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .burgerMenu a {
+    color: #5b006a;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .burgerMenu a:hover {
+    background-color: #f0f0f0;
+  }
 }

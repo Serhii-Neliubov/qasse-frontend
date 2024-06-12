@@ -31,7 +31,7 @@ export default function Login() {
           <Header />
           <div className={styles.container}>
               <div className={styles.content}>
-                  <div/>
+                  <div className={styles.block}/>
                   <form className={styles.form}>
                       <img src={logoImg} alt='Image'/>
                       <h1>Login</h1>

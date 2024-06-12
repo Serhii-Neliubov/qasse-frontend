@@ -48,9 +48,9 @@ export default function Footer() {
                     <nav className={styles.linksColumn}>
                     <span className={styles.columTitle}>Support</span>
                         <ul className={styles.columnLinks}>
-                            <li><Link to="/products"  className={styles.columnLink}>Products</Link></li>
-                            <li><Link to="/login"  className={styles.columnLink}>Login</Link></li>
-                            <li><Link to="/register"  className={styles.columnLink}>Register</Link></li>
+                            <li><Link to="/products"  className={styles.columnLink}>Privacy Policy</Link></li>
+                            <li><Link to="/login"  className={styles.columnLink}>Language</Link></li>
+                            <li><Link to="/register"  className={styles.columnLink}>Term & Conditions</Link></li>
                         </ul>
                     </nav>
                     <div className={styles.contactInfoColumn}>

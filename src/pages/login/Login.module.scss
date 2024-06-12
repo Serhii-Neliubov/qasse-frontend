@@ -117,3 +117,111 @@
   font-size: 16px;
   font-weight: 500;
 }
+@media (max-width: 1180px) {
+  .personImg{
+    position: static;
+    z-index: 5;
+    align-items: center;
+  }
+  .block{
+    position: absolute;
+  }
+  .form{
+    margin: 0 auto;
+    width: 700px;
+    align-items: initial;
+    & > img{
+      max-width: 130px;
+    }
+    & > h1 {
+      font-size: 32px;
+    }
+  
+    & > input {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+  
+    & > button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 15px 0;
+      background-color: #3C164F;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .forgotPasswordLink{
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+  }
+  .leftParticlesImg{
+    display: none;
+  }
+  .leftBParticlesImg{
+    display: none;
+  }
+  .flowersImg{
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .personImg{
+    position: static;
+    margin: 0 auto;
+    z-index: 50;
+    max-width: 371.58px;
+    max-height: 316.47px  ;
+  }
+  .block{
+    position: static;
+  }
+  .form{
+    margin: 0 auto;
+    max-width: 400px;
+    align-items: center;
+    & > img{
+      max-width: 130px;
+    }
+    & > h1 {
+      font-size: 32px;
+    }
+  
+    & > input {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+  
+    & > button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 15px 0;
+      background-color: #3C164F;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .forgotPasswordLink{
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+  }
+  .alreadyHaveAnAccount{
+    font-size: 12px;
+    
+  }
+  .termsOfUse{
+    font-size: 12px;
+  }
+}
+
