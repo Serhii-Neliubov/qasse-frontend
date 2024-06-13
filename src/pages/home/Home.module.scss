@@ -328,3 +328,18 @@
     font-family: Poppins, sans-serif;
   }
 }
+@media (max-width: 1180px) {
+  .hero_container{
+    flex-direction: column;
+    .hero_person_img{
+      position: static;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .hero_person_img{
+    position: static;
+    width: 174.23px;
+    height: 245.07px;
+  }
+}
