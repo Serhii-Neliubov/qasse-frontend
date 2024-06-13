@@ -27,6 +27,12 @@
     font-family: Poppins, sans-serif;
   }
 }
+.healthyMiddle{
+  display: none;
+}
+.glowIntelligentlyMiddleImg1{
+  display: none;
+}
 
 .heroImg1 {
   position: absolute;
@@ -172,6 +178,9 @@
 .glowIntelligentlyImg1 {
   position: relative;
   z-index: 10;
+}
+.glowText{
+  display: none;
 }
 
 .glowIntelligentlyImg2 {
@@ -370,4 +379,137 @@
         color: #555555;
         font-family: Poppins, sans-serif;
     }
+}
+
+@media (max-width: 1180px) {
+  .globalContainer{
+    display: flex;
+    flex-direction: column;
+    .surfaceLevelBlocks{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .surfaceLevelBlock{
+      width: 100%;
+      padding: 0px 70px;
+      display: flex;
+    }
+      .surfaceLevelBlockContent{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1000px;
+        align-items: center;
+        & > p{
+          width: 100%;
+        }
+      }
+
+    .glowIntelligentlyContent{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & > h3{
+        display: none;
+      }
+    }
+    .glowIntelligentlyImg1{
+      display: none;
+    }
+    .glowIntelligentlyMiddleImg1{
+      display: block;
+    }
+    .healthyParagraph{
+      padding: 0px 20px;
+    }
+    .heroButtons{
+      margin-top: 30px;
+    }
+    .healthyWide{
+      display: none;
+    }
+    .healthyMiddle{
+      display: block;
+    }
+
+    .heroContent{
+      flex-direction: column;
+    }
+    .glowText{
+      display: block;
+      font-size: 200px;
+      margin: 0 auto;
+      color: rgba(60, 22, 79, 0.25);
+      font-family: "Cormorant Garamond", sans-serif;
+    }
+    .glowIntelligentlyText{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .heroContentImg{
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 100px;
+      .heroImg2{
+        position: static;
+      } .heroImg3{
+        position: static;
+      } .heroImg4{
+        position: static;
+      }
+      .heroImg4{
+        display: none;
+      }
+    }
+    .heroContainer{
+      display: flex;
+      flex-direction: column;
+    }
+    .healthyContent{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      .healthyText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .skincareOptimizerContent{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & > button{
+        margin-top: 50px;
+      }
+    }
+    .joinOurCommunityContent{
+      flex-direction: column;
+      width: 100%;
+      height: 500px;
+    }
+    .heroImg1{
+      top: 300px;
+    }
+    .surfaceLevelBlockImg {   
+      & > img {
+        position: static;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .hero_person_img{
+    position: static;
+    width: 174.23px;
+    height: 245.07px;
+  }
 }
