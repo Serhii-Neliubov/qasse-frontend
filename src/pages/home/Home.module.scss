@@ -233,7 +233,34 @@
 .favouriteProductsContent {
   max-width: 1350px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  & > h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #3C164F;
+    font-family: "Cormorant Garamond", sans-serif;
+    margin-bottom: 50px;
+  }
 }
+
+.favouriteProductsButton {
+  & > button {
+    padding: 15px 30px;
+    background-color: #3C164F;
+    color: white;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+    border: none;
+  }
+
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .joinOurCommunity {
   padding: 120px 0;
   background-color: white;
@@ -326,6 +353,93 @@
     font-size: 16px;
     color: #555555;
     font-family: Poppins, sans-serif;
+  }
+}
+.skincareIngredients{
+  background-color: white;
+  padding-bottom: 120px;
+}
+.skincareIngredientsContent {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  & > h2 {
+    font-size: 50px;
+    color: #3C164F;
+    font-family: "Cormorant Garamond", sans-serif;
+    margin-bottom: 10px;
+    max-width: 730px;
+    text-align: center;
+  }
+
+  & > p {
+    font-size: 16px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+    max-width: 814px;
+    text-align: center;
+  }
+
+  & > button {
+    padding: 15px 30px;
+    background-color: #3C164F;
+    color: white;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+    border: none;
+  }
+}
+.skincareIngredientsBlocks {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.skincareIngredientsBlock {
+  padding: 30px;
+  background-color: #FDF6FF;
+
+  & > h3 {
+    font-size: 28px;
+    color: #3C164F;
+    font-family: "Cormorant Garamond", sans-serif;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #a6a6a6;
+      bottom: -15px;
+      left: 0;
+    }
+  }
+
+  & > p {
+    font-size: 16px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+    max-width: 255px;
+  }
+
+  & > div {
+    background-color: rgba(60, 22, 79, 0.1);
+    max-width: 144px;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: #3C164F;
+    font-family: Poppins, sans-serif;
+    margin-top: 10px;
   }
 }
 @media (max-width: 1180px) {

@@ -24,6 +24,14 @@ import likeImg from "@assets/home/join-our-community/like.svg";
 import styles from "./Home.module.scss";
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import Product from "@components/home/Product.tsx";
+import {Swiper, SwiperSlide} from "swiper/react";
+
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+
+import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
 
 const top100Films = [
   { label: 'The Shawshank Redemption', year: 1994 },
@@ -118,12 +126,107 @@ export default function Home() {
         <div className={styles.favouriteProducts}>
           <div className={styles.favouriteProductsContent}>
             <h2>All your favs, in one place</h2>
-            <div className={styles.favouriteProductBlocks}>
-              <div className={styles.favouriteProductBlock}></div>
+            <div>
+              <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                pagination={{ clickable: true }}
+                slidesPerView={4}
+              >
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className={styles.favouriteProductsButton}>
+              <button>View All Products</button>
             </div>
           </div>
         </div>
-        <div className={styles.skincareIngridients}>Home</div>
+        <div className={styles.skincareIngredients}>
+          <div className={styles.skincareIngredientsContent}>
+            <h2>Skincare Ingredients Glossary:
+              learn about your ingredients list here</h2>
+            <p>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting
+              alternatives for your specific skin type or concerns.</p>
+            <div className={styles.skincareIngredientsBlocks}>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+              <div className={styles.skincareIngredientsBlock}>
+                <div>
+                  710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+              </div>
+            </div>
+            <button>Browse Ingredients</button>
+          </div>
+        </div>
         <div className={styles.skinPotential}>Home</div>
         <div className={styles.companyAdvantages}>Home</div>
         <div className={styles.trendingProducts}>Home</div>

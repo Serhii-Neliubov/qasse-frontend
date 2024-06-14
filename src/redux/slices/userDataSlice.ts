@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { AuthResponse } from '@models/IAuthResponse';
 import AuthService from "@services/AuthService.ts";
 import {IUser} from "@models/IUser.ts";
+import $api from "@utils/interceptors.ts";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -63,7 +63,7 @@ export const checkAuth = createAsyncThunk<AuthResponse, void, { rejectValue: str
   'user/checkAuth',
   async (_, { rejectWithValue }) => {
       try {
-          const response = await axios.get<AuthResponse>(`${API_URL}/refresh`, { withCredentials: true });
+          const response = await $api.get<AuthResponse>(`${API_URL}/api/auth/refresh`, { withCredentials: true });
           localStorage.setItem('token', response.data.accessToken);
           return response.data;
       } catch (e: any) {
