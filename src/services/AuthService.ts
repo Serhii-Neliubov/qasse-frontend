@@ -9,7 +9,7 @@ export default class AuthService {
                 password: password,
             }
 
-            const res = await $api.post<AuthResponse>(`${import.meta.env.VITE_API_URL}/api/auth/login`, body);
+            const res = await $api.post<AuthResponse>('/api/auth/login', body);
 
             if(!res.data.accessToken) {
                 return console.error('No access tokens found')
@@ -29,13 +29,14 @@ export default class AuthService {
                 password: password,
             }
 
-            const res = await $api.post<AuthResponse>(`${import.meta.env.VITE_API_URL}/api/auth/register`, body);
+            const res = await $api.post<AuthResponse>('/api/auth/register', body);
 
             if(!res.data.accessToken) {
                 return console.error('No access tokens found')
             }
 
             localStorage.setItem('token', res.data.accessToken);
+            return res;
         } catch (error) {
             console.error(error)
         }
@@ -48,7 +49,7 @@ export default class AuthService {
                 redirect_url: '/'
             };
 
-            const { data } = await $api.post(`${import.meta.env.VITE_API_URL}/auth/reset-password/`, body);
+            const { data } = await $api.post('/auth/reset-password/', body);
 
             return data.response;
         } catch (error) {
