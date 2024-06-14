@@ -3,7 +3,6 @@ import useInput from "../../hooks/useInput.tsx";
 import styles from "./Header.module.scss";
 import { CiSearch } from "react-icons/ci";
 import HeaderLink from "./HeaderLink.tsx";
-
 import logo from '../../assets/logo.svg';
 import { useState } from "react";
 
@@ -66,16 +65,19 @@ export default function Header() {
                     <span></span>
                 </div>
                 {isOpen && (
-                    <div className={styles.burgerMenu}>
-                        <Link to='/login' className={styles.navSecondActionLink}>Log in</Link>
-                        <Link to='/register' className={`${styles.navSecondActionLink}`}>Sign Up</Link>
-                        <a target='_blank' href='https://qasse.blog/' className={styles.navLink}>Blog</a>
-                        {links.map(link => (
-                            <li key={link.path}>
-                                <HeaderLink name={link.name} path={link.path} />
-                            </li>
-                        ))}
-                    </div>
+                    <>
+                        <div className={styles.burgerMenuOverlay} onClick={handleToggleMenu}></div>
+                        <div className={styles.burgerMenu}>
+                            <Link to='/login' className={styles.navSecondActionLink}>Log in</Link>
+                            <Link to='/register' className={`${styles.navSecondActionLink}`}>Sign Up</Link>
+                            <a target='_blank' href='https://qasse.blog/' className={styles.navLink}>Blog</a>
+                            {links.map(link => (
+                                <li key={link.path}>
+                                    <HeaderLink name={link.name} path={link.path} />
+                                </li>
+                            ))}
+                        </div>
+                    </>
                 )}
             </div>
         </div>

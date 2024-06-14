@@ -145,7 +145,7 @@ export default function About() {
             <div className={styles.skincareOptimizerContainer}>
               <div className={styles.skincareOptimizerContent}>
                 <div className={styles.skincareOptimizerText}>
-                  <h2>Skincare Optimizer</h2>
+                  <h2>Skincare routine optimizer</h2>
                   <p>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting.</p>
                 </div>
                 <button>Go to Routine Creator</button>
