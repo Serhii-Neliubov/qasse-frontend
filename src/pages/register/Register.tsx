@@ -1,4 +1,6 @@
-import AuthService from "@services/AuthService.ts";
+import {MouseEvent} from 'react';
+import {AppDispatch} from "@redux/store.ts";
+import {useDispatch} from "react-redux";
 
 import useInput from "@hooks/useInput.tsx";
 import Header from "@components/header/Header.tsx";
@@ -13,15 +15,30 @@ import leftBParticlesImage from '@assets/(auth)/left-b-particle.svg';
 
 import styles from './Register.module.scss';
 import {Link} from "react-router-dom";
+import {registration} from "@redux/slices/userDataSlice.ts";
 
 export default function Register() {
+    const dispatch = useDispatch<AppDispatch>();
+
     const email = useInput('');
     const password = useInput('');
     const confirmPassword = useInput('');
 
-    async function registerHandler() {
+    async function registerHandler(event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) {
+        event.preventDefault();
+
         try {
-            await AuthService.register(email.value, password.value);
+            if(password.value !== confirmPassword.value) {
+                console.error('Passwords do not match');
+                return;
+            }
+
+            const body = {
+                email: email.value,
+                password: password.value,
+            }
+
+            dispatch(registration(body));
         } catch (error){
             console.error(error)
         }
@@ -39,7 +56,7 @@ export default function Register() {
                         <input {...email} placeholder='Email'/>
                         <input {...password} placeholder='Password'/>
                         <input {...confirmPassword} placeholder='Confirm Password'/>
-                        <button onClick={registerHandler}>Login</button>
+                        <button onClick={event => registerHandler(event)}>Login</button>
                         <div className={styles.alreadyHaveAnAccount}>
                             <span>Already have an account?</span>
                             <Link to='/login' className={styles.link}>Login</Link>

@@ -1,4 +1,5 @@
-import AuthService from "@services/AuthService.ts";
+import {MouseEvent} from 'react';
+import {useDispatch} from "react-redux";
 
 import useInput from "@hooks/useInput.tsx";
 import Header from "@components/header/Header.tsx";
@@ -13,14 +14,25 @@ import rightParticlesImage from '@assets/(auth)/right-particle.svg';
 import styles from './Login.module.scss';
 import {Link} from "react-router-dom";
 import leftBParticlesImage from "@assets/(auth)/left-b-particle.svg";
+import {login} from "@redux/slices/userDataSlice.ts";
+import {AppDispatch} from "@redux/store.ts";
 
 export default function Login() {
+    const dispatch = useDispatch<AppDispatch>();
+
     const email = useInput('');
     const password = useInput('');
 
-    async function loginHandler() {
+    async function loginHandler(event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) {
+        event.preventDefault();
+
         try {
-            await AuthService.login(email.value, password.value);
+            const body = {
+                email: email.value,
+                password: password.value,
+            }
+
+            dispatch(login(body));
         } catch (error){
             console.error(error)
         }
@@ -38,10 +50,10 @@ export default function Login() {
                       <input {...email} placeholder='Email'/>
                       <input {...password} placeholder='Password'/>
                       <Link to='/reset-password' className={styles.forgotPasswordLink}>Forgot Password?</Link>
-                      <button onClick={loginHandler}>Login</button>
+                      <button onClick={event => loginHandler(event)}>Login</button>
                       <div className={styles.alreadyHaveAnAccount}>
                           <span>Don’t have an account?</span>
-                          <Link to='/registers' className={styles.link}>Register</Link>
+                          <Link to='/register' className={styles.link}>Register</Link>
                       </div>
                       <Link className={styles.termsOfUse} to='/privacy-policy'>Terms of Use | Privacy Policy</Link>
                   </form>

@@ -1,24 +1,22 @@
 import $api from "../utils/interceptors.ts";
+import {AuthResponse} from "@models/IAuthResponse.ts";
 
 export default class AuthService {
     static async login(email: string, password: string) {
         try {
             const body = {
-                username: email,
+                email: email,
                 password: password,
-                grant_type: "password",
-                client_id: import.meta.env.VITE_CLIENT_ID,
-                client_secret: import.meta.env.VITE_CLIENT_SECRET,
             }
 
-            const res = await $api.post(`${import.meta.env.VITE_API_URL}/auth/token/`, body);
+            const res = await $api.post<AuthResponse>(`${import.meta.env.VITE_API_URL}/api/auth/login`, body);
 
-            if(!res.data.access_token || !res.data.refresh_token) {
+            if(!res.data.accessToken) {
                 return console.error('No access tokens found')
             }
 
-            localStorage.setItem('token', res.data.access_token);
-            localStorage.setItem('refreshToken', res.data.refresh_token);
+            localStorage.setItem('token', res.data.accessToken);
+            return res;
         } catch (error) {
             console.error(error)
         }
@@ -31,14 +29,13 @@ export default class AuthService {
                 password: password,
             }
 
-            const res = await $api.post(`${import.meta.env.VITE_API_URL}/auth/register/`, body);
+            const res = await $api.post<AuthResponse>(`${import.meta.env.VITE_API_URL}/api/auth/register`, body);
 
-            if(!res.data.access_token || !res.data.refresh_token) {
+            if(!res.data.accessToken) {
                 return console.error('No access tokens found')
             }
 
-            localStorage.setItem('token', res.data.access_token);
-            localStorage.setItem('refreshToken', res.data.refresh_token);
+            localStorage.setItem('token', res.data.accessToken);
         } catch (error) {
             console.error(error)
         }

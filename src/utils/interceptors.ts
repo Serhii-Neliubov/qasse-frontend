@@ -1,37 +1,41 @@
 import axios from 'axios';
-import { getCsrfToken } from "./getCsrfToken.ts";
 
+// Создание экземпляра Axios
 const $api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL,
-    headers: {
-        "Content-Type": "application/json",
-    },
+    baseURL: 'https://api.example.com', // базовый URL для API
+    timeout: 10000, // таймаут для запросов
 });
 
-$api.interceptors.request.use(config => {
-    const token = getCsrfToken('csrftoken');
-    if (token) {
-        config.headers['X-CSRFToken'] = token;
-    }
+// Добавление интерцептора для запросов
+$api.interceptors.request.use(
+  (config) => {
+      // Получение токена из localStorage (или любого другого хранилища)
+      const token = localStorage.getItem('token');
+      if (token) {
+          config.headers.Authorization = `Bearer ${token}`;
+      }
+      return config;
+  },
+  (error) => {
+      // Обработка ошибки запроса
+      return Promise.reject(error);
+  }
+);
 
-    const accessToken = localStorage.getItem('token');
-    if (accessToken) {
-        config.headers['Authorization'] = `Bearer ${accessToken}`;
-    }
+// Добавление интерцептора для ответов
+$api.interceptors.response.use(
+  (response) => {
+      // Обработка успешного ответа
+      return response;
+  },
+  (error) => {
+      // Обработка ошибок ответа
+      if (error.response.status === 401) {
+          // Например, можно перенаправить на страницу входа при получении 401 ошибки
+          window.location.href = '/login';
+      }
+      return Promise.reject(error);
+  }
+);
 
-    return config;
-}, error => {
-    return Promise.reject(error);
-});
-
-$api.interceptors.response.use(response => {
-    return response;
-}, error => {
-    if (error.response && error.response.status === 401) {
-        console.error('Unauthorized access - possibly invalid token');
-    }
-
-    return Promise.reject(error);
-});
-
-export default $api
+export default $api;
