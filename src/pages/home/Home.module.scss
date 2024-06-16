@@ -463,6 +463,157 @@
 .skincareOptimizerTextParagraphMiddle{
   display: none;
 }
+
+.skinPotential {
+  padding: 120px 0;
+  background-color: rgba(253, 246, 255, 1);
+}
+
+.skinPotentialContent {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.skinPotentialBlocks {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  max-width: 568px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skinPotentialBlocksColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+  &:last-child {
+    margin-top: 50px;
+  }
+}
+.skinPotentialBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 20px;
+  width: 269px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  align-items: center;
+
+  & > span {
+    text-align: center;
+    color: #3C164F;
+    font-size: 24px;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 800;
+  }
+
+  & > p {
+    color: #555555;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+  }
+}
+.skinPotentialImg {
+  position: relative;
+  width: 65px;
+  margin-bottom: 30px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: rgb(253, 246, 255);
+
+  & > img {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+  }
+}
+.skinPotentialText {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 672px;
+
+  & > h2 {
+    max-width: 600px;
+    font-size: 50px;
+    color: #3C164F;
+    font-family: "Cormorant Garamond", sans-serif;
+  }
+
+  & > p {
+    font-size: 16px;
+    color: #555555;
+    font-family: Poppins, sans-serif;
+  }
+
+  & > button {
+    max-width: 120px;
+    padding: 15px 0;
+    margin-top: 15px;
+
+    background-color: #3C164F;
+    color: white;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.companyAdvantages {
+  background-color: white;
+  padding: 300px 0 120px 0;
+}
+
+.companyAdvantagesContent {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  gap: 170px;
+    justify-content: space-around;
+}
+
+.companyAdvantagesBlock {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  margin-top: 40px;
+
+    & > span {
+        color: #3C164F;
+        font-size: 96px;
+        font-family: "Cormorant Garamond", sans-serif;
+        font-weight: 800;
+    }
+
+    & > p {
+        color: #555555;
+        font-size: 16px;
+      max-width: 100px;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+    }
+  &:last-child {
+    margin-top: 0;
+  }
+  &:last-child > p {
+    margin-top: 40px;
+  }
+}
+
+.trendingProducts {
+  padding: 100px 0;
+  background-color: rgba(253, 246, 255, 1);
+}
+
 @media (max-width: 1180px) {
   .hero{
     padding: 0;

@@ -21,7 +21,12 @@ import bookImg from "@assets/home/join-our-community/book.svg";
 import messageImg from "@assets/home/join-our-community/message.svg";
 import likeImg from "@assets/home/join-our-community/like.svg";
 
-import styles from "./Home.module.scss";
+// Unlock Your Skin's Potential with Confidence
+import skinSunImg from "@assets/home/unlock-skin-potential/sun.svg";
+import skinMessageImg from "@assets/home/unlock-skin-potential/message.svg";
+import skinFireImg from "@assets/home/unlock-skin-potential/fire.svg";
+import skinRedditImg from "@assets/home/unlock-skin-potential/reddit.svg";
+
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Product from "@components/home/Product.tsx";
@@ -33,6 +38,8 @@ import 'swiper/scss/pagination';
 
 import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
 import { useEffect, useState } from "react";
+
+import styles from "./Home.module.scss";
 
 const top100Films = [
   { label: 'The Shawshank Redemption', year: 1994 },
@@ -101,15 +108,9 @@ export default function Home() {
             <img src={rightBrunchImg} alt='Image' className={styles.hero_rightBrunchImg_img}/>
           </div>
         </div>
-
         <div className={styles.checkCompatibility}>
           <div className={styles.checkCompatibilityContainer}>
             <h2 className={styles.checkCompatibilityTitle}>You can Check Product Compatibility</h2>
-            <p className={styles.hero_descriptionMiddle}>Qasse is your intelligent companion, guiding you through
-                product compatibility, ingredient
-                education, personalized routines, and in-depth product analysis with aggregated user reviews
-                for
-                a glowing complexion.</p>
             <p className={styles.checkCompatibilityDescription}>Build your best suited routine by checking which
               products are compatible. Check which ones could cause Interactions, that might irritate your skin.</p>
 
@@ -248,10 +249,107 @@ export default function Home() {
             <button>Browse Ingredients</button>
           </div>
         </div>
-        <div className={styles.skinPotential}>Home</div>
-        <div className={styles.companyAdvantages}>Home</div>
-        <div className={styles.trendingProducts}>Home</div>
-        <nav className={styles.usefulMenuLinks}>Home</nav>
+        <div className={styles.skinPotential}>
+          <div className={styles.skinPotentialContent}>
+            <div className={styles.skinPotentialText}>
+              <h2>Unlock Your Skin's Potential
+                with Confidence</h2>
+              <p>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting alternatives for your specific skin type or concerns. Try it now for a smoother, clearer complexion.</p>
+              <button>Explore More</button>
+            </div>
+            <div className={styles.skinPotentialBlocks}>
+              <div className={styles.skinPotentialBlocksColumn}>
+                <div className={styles.skinPotentialBlock}>
+                  <div className={styles.skinPotentialImg}>
+                    <img src={skinRedditImg} alt='icon image'/>
+                  </div>
+                  <span>Reddit Rediscovered</span>
+                  <p>We find the hidden gems, Stories/Insights so you don’t have to!</p>
+                </div>
+                <div className={styles.skinPotentialBlock}>
+                  <div className={styles.skinPotentialImg}>
+                    <img src={skinMessageImg} alt='icon image'/>
+                  </div>
+                  <span>Qasse Aggregated Peer Reviews</span>
+                  <p>With in-depth analysis for your smart shopping!</p>
+                </div>
+              </div>
+              <div className={styles.skinPotentialBlocksColumn}>
+                <div className={styles.skinPotentialBlock}>
+                  <div className={styles.skinPotentialImg}>
+                    <img src={skinFireImg} alt='icon image'/>
+                  </div>
+                  <span>Find Dupes & Trending Deals</span>
+                  <p>Save money! Save your time!</p>
+                </div>
+                <div className={styles.skinPotentialBlock}>
+                  <div className={styles.skinPotentialImg}>
+                    <img src={skinSunImg} alt='icon image'/>
+                  </div>
+                  <span>Qasse GlowFinder</span>
+                  <p>Find the best skincare centers here. Your skincare needs Directory!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.companyAdvantages}>
+          <div className={styles.companyAdvantagesContent}>
+            <div className={styles.companyAdvantagesBlock}>
+              <span>11K+</span>
+              <p>Researched Products</p>
+            </div>
+            <div className={styles.companyAdvantagesBlock}>
+              <span>8K+</span>
+              <p>Happy Client</p>
+            </div>
+            <div className={styles.companyAdvantagesBlock}>
+              <span>9</span>
+              <p>Different Categories</p>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.trendingProducts}>
+          <div className={styles.favouriteProductsContent}>
+            <h2>Trending products</h2>
+            <div>
+              <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                pagination={{clickable: true}}
+                spaceBetween={30}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                style={{width: '100%', maxWidth: '100%'}}
+              >
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Product/>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className={styles.favouriteProductsButton}>
+              <button>View All Products</button>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.joinOurCommunity}>
           <div className={styles.joinOurCommunityContent}>
             <div className={styles.joinOurCommunityBlocks}>
