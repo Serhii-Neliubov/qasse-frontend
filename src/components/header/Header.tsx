@@ -56,20 +56,22 @@ export default function Header() {
                     <img src={logo} alt='Logo image' />
                 </Link>
                 <div className={styles.burgerContainer}>
-                        <div className={styles.navSearch__image_box}>
-                            <CiSearch className={styles.navSearch__image} />
-                        </div>
-                <div className={`${styles.burger} ${isOpen ? 'active' : ''}`} onClick={handleToggleMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <div className={styles.navSearch__image_box}>
+                        <CiSearch className={styles.navSearch__image} />
+                    </div>
+                    <div className={`${styles.burger} ${isOpen ? 'active' : ''}`} onClick={handleToggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 {isOpen && (
                     <>
                         <div className={styles.burgerMenuOverlay} onClick={handleToggleMenu}></div>
                         <div className={styles.burgerMenu}>
+                            <div className={styles.closeButton} onClick={handleToggleMenu}>&times;</div>
                             <Link to='/login' className={styles.navSecondActionLink}>Log in</Link>
-                            <Link to='/register' className={`${styles.navSecondActionLink}`}>Sign Up</Link>
+                            <Link to='/register' className={styles.navSecondActionLink}>Sign Up</Link>
                             <a target='_blank' href='https://qasse.blog/' className={styles.navLink}>Blog</a>
                             {links.map(link => (
                                 <li key={link.path}>
@@ -80,7 +82,6 @@ export default function Header() {
                     </>
                 )}
             </div>
-        </div>
         </div>
     );
 }

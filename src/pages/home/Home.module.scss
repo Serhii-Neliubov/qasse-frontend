@@ -443,17 +443,37 @@
   }
 }
 @media (max-width: 1180px) {
+  .hero{
+    padding: 0;
+  }
   .hero_container{
     flex-direction: column;
     .hero_person_img{
       position: static;
     }
   }
-}
+  .hero_title{
+      padding: 0px 20px;
+      font-size: 24px;
+      align-items: center;
+      & > img{
+        width: 98px;
+        height: 40px;
+      }
+    }
+  }
 @media (max-width: 576px) {
   .hero_person_img{
     position: static;
-    width: 174.23px;
-    height: 245.07px;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 132px;
+  }
+  .hero_bottleImg_img{
+    width: 400px;
+    height: 454.55px;
+    top: 450px;
+    left: 41%;
   }
 }
