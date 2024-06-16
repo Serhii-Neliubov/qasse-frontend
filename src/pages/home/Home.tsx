@@ -32,6 +32,7 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
 import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
+import { useEffect, useState } from "react";
 
 const top100Films = [
   { label: 'The Shawshank Redemption', year: 1994 },
@@ -54,14 +55,26 @@ const top100Films = [
 ]
 
 export default function Home() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
+
+
+  
     return (
       <div>
         <Header/>
         <div className={styles.hero}>
           <div className={styles.hero_container}>
             <div className={styles.hero_text}>
-              <h1 className={styles.hero_title}>Search engine built <img src={textUpImg} alt='Text image'/>
-                exclusively for <img src={textDownImg} alt='Text image'/> skincare
+              <h1 className={styles.hero_title}>Search engine built <img src={textUpImg} alt='Text image' className={styles.hero_img1}/>
+                exclusively for <img src={textDownImg} alt='Text image' className={styles.hero_img}/> skincare
               </h1>
               <span className={styles.hero_subtitle}>Revolutionizing Skincare, One Ingredient at a Time.Explore. Analyze. Thrive with Qasse.</span>
               <p className={styles.hero_description}>Qasse is your intelligent companion, guiding you through
@@ -92,6 +105,11 @@ export default function Home() {
         <div className={styles.checkCompatibility}>
           <div className={styles.checkCompatibilityContainer}>
             <h2 className={styles.checkCompatibilityTitle}>You can Check Product Compatibility</h2>
+            <p className={styles.hero_descriptionMiddle}>Qasse is your intelligent companion, guiding you through
+                product compatibility, ingredient
+                education, personalized routines, and in-depth product analysis with aggregated user reviews
+                for
+                a glowing complexion.</p>
             <p className={styles.checkCompatibilityDescription}>Build your best suited routine by checking which
               products are compatible. Check which ones could cause Interactions, that might irritate your skin.</p>
 
@@ -99,14 +117,14 @@ export default function Home() {
               disablePortal
               id="combo-box-demo"
               options={top100Films}
-              sx={{width: 705, marginTop: '15px'}}
+              className={styles.autocomplete}
               renderInput={(params) => <TextField {...params} label="Type to search or Select a product"/>}
             />
             <Autocomplete
               disablePortal
               id="combo-box-demo"
               options={top100Films}
-              sx={{width: 705, marginBottom: '15px'}}
+              className={styles.autocomplete}
               renderInput={(params) => <TextField {...params}
                                                   label="Type to search or Select another product to compare with"/>}
             />
@@ -117,8 +135,9 @@ export default function Home() {
         <div className={styles.skincareOptimizerContainer}>
           <div className={styles.skincareOptimizerContent}>
             <div className={styles.skincareOptimizerText}>
-              <h2>Skincare Optimizer</h2>
-              <p>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting.</p>
+              <h2>Skincare routine optimizer</h2>
+              <p className={styles.skincareOptimizerTextParagraph}>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting.</p>
+              <p className={styles.skincareOptimizerTextParagraphMiddle}>Qasse is your intelligent companion, guiding you through product compatibility, ingredient education, personalized routines, and in-depth product analysis with aggregated user reviews for a glowing complexion..</p>
             </div>
             <button>Go to Routine Creator</button>
           </div>
@@ -130,7 +149,9 @@ export default function Home() {
               <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{ clickable: true }}
-                slidesPerView={4}
+                spaceBetween={30}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                style={{ width: '100%', maxWidth: '100%' }}
               >
                 <SwiperSlide>
                   <Product />
