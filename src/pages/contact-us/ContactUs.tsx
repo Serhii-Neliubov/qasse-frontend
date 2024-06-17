@@ -1,13 +1,13 @@
 import React from "react";
+import axios from "axios";
 
-import useInput from "../../hooks/useInput.tsx";
-import Header from "../../components/header/Header.tsx";
+import useInput from "@hooks/useInput.tsx";
+import Header from "@components/header/Header.tsx";
+import Footer from "@components/footer/Footer.tsx";
+
+import personImage from "@assets/contact-us/person-image.svg";
 
 import styles from "./ContactUs.module.scss";
-import Footer from "../../components/footer/Footer.tsx";
-
-import personImage from "../../assets/contact-us/person-image.svg";
-import axios from "axios";
 
 export default function ContactUs() {
     const name = useInput('');

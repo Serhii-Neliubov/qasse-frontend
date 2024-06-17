@@ -1,4 +1,6 @@
 import Header from "@components/header/Header.tsx";
+import Footer from "@components/footer/Footer.tsx";
+
 import styles from "./About.module.scss";
 
 // Hero
@@ -12,7 +14,6 @@ import personFlowers from "@assets/about/person-flowers.svg";
 import textImg1 from "@assets/about/text-img.svg";
 import textImg2 from "@assets/about/text-img1.svg";
 import textArrow from "@assets/about/arrow-down.svg";
-import Footer from "@components/footer/Footer.tsx";
 import {IoIosPlayCircle} from "react-icons/io";
 
 // Glow Intelligently

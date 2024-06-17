@@ -1,5 +1,9 @@
 import {MouseEvent} from 'react';
 import {useDispatch} from "react-redux";
+import {Link} from "react-router-dom";
+
+import {login} from "@redux/slices/userDataSlice.ts";
+import {AppDispatch} from "@redux/store.ts";
 
 import useInput from "@hooks/useInput.tsx";
 import Header from "@components/header/Header.tsx";
@@ -10,12 +14,9 @@ import personImage from '@assets/(auth)/person-img.svg';
 import flowers from '@assets/(auth)/flowers.svg';
 import leftParticlesImage from '@assets/(auth)/left-particle.svg';
 import rightParticlesImage from '@assets/(auth)/right-particle.svg';
+import leftBParticlesImage from "@assets/(auth)/left-b-particle.svg";
 
 import styles from './Login.module.scss';
-import {Link} from "react-router-dom";
-import leftBParticlesImage from "@assets/(auth)/left-b-particle.svg";
-import {login} from "@redux/slices/userDataSlice.ts";
-import {AppDispatch} from "@redux/store.ts";
 
 export default function Login() {
     const dispatch = useDispatch<AppDispatch>();

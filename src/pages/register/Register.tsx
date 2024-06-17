@@ -1,6 +1,9 @@
 import {MouseEvent} from 'react';
-import {AppDispatch} from "@redux/store.ts";
 import {useDispatch} from "react-redux";
+import {Link} from "react-router-dom";
+
+import {AppDispatch} from "@redux/store.ts";
+import {registration} from "@redux/slices/userDataSlice.ts";
 
 import useInput from "@hooks/useInput.tsx";
 import Header from "@components/header/Header.tsx";
@@ -14,8 +17,6 @@ import rightParticlesImage from '@assets/(auth)/right-particle.svg';
 import leftBParticlesImage from '@assets/(auth)/left-b-particle.svg';
 
 import styles from './Register.module.scss';
-import {Link} from "react-router-dom";
-import {registration} from "@redux/slices/userDataSlice.ts";
 
 export default function Register() {
     const dispatch = useDispatch<AppDispatch>();

@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
+import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
+
 import Header from "@components/header/Header.tsx";
 import Footer from "@components/footer/Footer.tsx";
 
 import {IoIosPlayCircle} from "react-icons/io";
 
+// Hero
 import arrowImg from "@assets/home/hero/arrow.svg";
 import bottleImg from "@assets/home/hero/bottle-img.svg";
 import branchImg from "@assets/home/hero/branch-img.svg";
@@ -35,10 +39,6 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-
-import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
-import { useEffect, useState } from "react";
-
 import styles from "./Home.module.scss";
 
 const top100Films = [

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import AuthService from "@services/AuthService.ts";
 
 import useInput from "@hooks/useInput.tsx";
@@ -12,7 +14,6 @@ import rightParticlesImage from '@assets/(auth)/right-particle.svg';
 import leftBParticlesImage from "@assets/(auth)/left-b-particle.svg";
 
 import styles from './ResetPassword.module.scss';
-import {Link} from "react-router-dom";
 
 export default function ResetPassword() {
     const email = useInput('');

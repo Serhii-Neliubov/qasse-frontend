@@ -1,7 +1,8 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {ProductsService} from "../../../services/ProductsService.ts";
-import {IProduct} from "../../../models/IProduct.ts";
+
+import {ProductsService} from "@services/ProductsService.ts";
+import {IProduct} from "@models/IProduct.ts";
 
 export default function ProductPage() {
     const [product, setProduct] = useState<IProduct | null>(null);

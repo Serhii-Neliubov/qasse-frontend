@@ -1,26 +1,25 @@
 import {useEffect, useState} from "react";
 import { Navigation, Pagination, A11y } from 'swiper/modules';
+import {Swiper, SwiperSlide} from "swiper/react";
 
-import Product from "@components/products/Product.tsx";
 import {ProductsService} from "@services/ProductsService.ts";
+
 import {IProduct} from "@models/IProduct.ts";
+import Footer from "@components/footer/Footer.tsx";
+import Header from "@components/header/Header.tsx";
+import Product from "@components/products/Product.tsx";
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { VscSettings } from "react-icons/vsc";
-
-import Header from "@components/header/Header.tsx";
-
-import styles from "./ProductsCatalog.module.scss";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 import productImg from "@assets/products-catalog/img.png";
 import Rating from "@mui/material/Rating";
-import Footer from "@components/footer/Footer.tsx";
-import {Swiper, SwiperSlide} from "swiper/react";
+
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import styles from "./ProductsCatalog.module.scss";
 
 export default function ProductsCatalog() {
     const [products, setProducts] = useState<IProduct[]>([]);
