@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {FaArrowRight} from "react-icons/fa";
 
 import productImg from '@assets/home/favourite-products/productTest.png';
+import Rating from '@mui/material/Rating';
 
 export default function Product() {
   return (
@@ -13,7 +14,7 @@ export default function Product() {
       <div className={styles.productInfo}>
         <span>Vita Snail First Esseceingredients Explained</span>
         <div>
-          * * * * *
+          <Rating name="read-only" value={5} readOnly />
           <span>(05)</span>
         </div>
         <Link to='/' className={styles.productInfoLink}>
