@@ -16,6 +16,7 @@ export default function Product({product, categories}: IProductProps) {
 
   useEffect(() => {
     const category = categories.find(category => category.category_id === product.category_id);
+
     setProductCategory(category ? category.category_name : '');
   }, [])
 
@@ -34,7 +35,7 @@ export default function Product({product, categories}: IProductProps) {
         <p>{product.description}</p>
         <div className={styles.productsCatalogActions}>
           <button>
-            <Link to='/products'>More Details</Link>
+            <Link to={`/products/${product.id}`}>More Details</Link>
           </button>
           <button>Compare</button>
         </div>

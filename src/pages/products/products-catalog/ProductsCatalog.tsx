@@ -23,10 +23,10 @@ export default function ProductsCatalog() {
     const [products, setProducts] = useState<IProduct[]>([]);
     const [categories, setCategories] = useState([]);
     const [filters, setFilters] = useState<string[]>([]);
-
+    console.log(filters)
     const getProducts = async () => {
         try {
-            const products = await ProductsService.getProducts(30, currentProductsPage, filters as string[]);
+            const products = await ProductsService.getProducts(30, currentProductsPage, filters);
             return products.items;
         } catch (error) {
             console.error(error);
@@ -34,8 +34,7 @@ export default function ProductsCatalog() {
     }
 
     useEffect(() => {
-        getProducts()
-          .then(products => setProducts(products));
+        getProducts().then(products => setProducts(products));
     }, [currentProductsPage, filters]);
 
     useEffect(() => {
@@ -57,7 +56,7 @@ export default function ProductsCatalog() {
               </div>
               <div className={styles.productsCatalog}>
                   <div className={styles.productsCatalogContent}>
-                      <Filter categories={categories} setFilters={setFilters} filters={filters} />
+                      <Filter categories={categories} setFilters={setFilters} />
                       <div className={styles.productsCatalogProducts}>
                           <div className={styles.productsCatalogProductsContent}>
                               <div className={styles.productsCatalogText}>

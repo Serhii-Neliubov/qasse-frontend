@@ -3,15 +3,20 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccordionDetails from "@mui/material/AccordionDetails";
 
-import styles from "@pages/products/products-catalog/ProductsCatalog.module.scss";
+import styles from "./ProductsCatalog.module.scss";
 
 interface FilterProps {
   categories: any[];
-  setFilters: (filters: string[]) => void;
-  filters: string[];
+  setFilters: (filters: any) => any;
 }
 
-export default function Filter({categories, setFilters, filters}: FilterProps) {
+export default function Filter({categories, setFilters}: FilterProps) {
+  const handleCheckboxChange = (categoryId: string) => {
+    setFilters((filters: string[]) => filters.includes(categoryId)
+      ? filters.filter(id => id !== categoryId)
+      : [...filters, categoryId]);
+  };
+
   return (
     <div className={styles.filterBlocks}>
       <div className={styles.productsCatalogFilter}>
@@ -28,7 +33,7 @@ export default function Filter({categories, setFilters, filters}: FilterProps) {
           {categories.map((category, index) =>
             <div key={index} className={styles.filterCategoryText}>
               <div>
-                <input onChange={() => setFilters([...filters, category.category_id])} type='checkbox'/>
+                <input onChange={() => handleCheckboxChange(category.category_id)} type='checkbox'/>
                 <span>{category.category_name}</span>
               </div>
               <span>{category.product_count}</span>
