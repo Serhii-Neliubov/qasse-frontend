@@ -242,6 +242,88 @@ export default function Home() {
                 <p>Lorem ipsum dolor sit amet,</p>
               </div>
             </div>
+            <div className={styles.skincareIngredientsCarusel}>
+              <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              pagination={{ clickable: true }}
+              spaceBetween={30}
+              slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+              style={{ width: '100%', maxWidth: '100%' }}
+              >
+              <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.skincareIngredientsBlock}>
+                <div>
+                710 products
+                </div>
+                <h3>Sodium Hyaluronate</h3>
+                <p>Lorem ipsum dolor sit amet,</p>
+                </div>
+                </SwiperSlide>
+                </Swiper>
+                </div>
             <button>Browse Ingredients</button>
           </div>
         </div>
