@@ -11,11 +11,6 @@ export interface IProduct {
   discount_price: string,
   clicks: number,
   website_from: string,
-  categoryId: number,
-  category: {
-    id: number,
-    name: string
-  },
+  category_id: number,
   reviews: string[],
-  product?: IProduct
 }

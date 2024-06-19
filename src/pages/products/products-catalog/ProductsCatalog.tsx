@@ -16,14 +16,16 @@ import productImg from "@assets/products-catalog/img.png";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from "./ProductsCatalog.module.scss";
+import $api from "@utils/interceptors.ts";
 
 export default function ProductsCatalog() {
-    const [currentProductsSize, setCurrentProductsSize] = useState<number>(30);
+    const [currentProductsPage, setCurrentProductsPage] = useState<number>(1);
     const [products, setProducts] = useState<IProduct[]>([]);
+    const [categories, setCategories] = useState([]);
 
     const getProducts = async () => {
         try {
-            const products = await ProductsService.getProducts(currentProductsSize, 1);
+            const products = await ProductsService.getProducts(30, currentProductsPage);
             return products.items;
         } catch (error) {
             console.error(error);
@@ -33,7 +35,14 @@ export default function ProductsCatalog() {
     useEffect(() => {
         getProducts()
           .then(products => setProducts(products));
-    }, [currentProductsSize]);
+
+    }, [currentProductsPage]);
+
+    useEffect(() => {
+        $api.get('/api/category')
+          .then(response => setCategories(response.data))
+          .catch(error => console.error(error));
+    }, []);
 
     return (
         <>
@@ -48,7 +57,7 @@ export default function ProductsCatalog() {
               </div>
               <div className={styles.productsCatalog}>
                   <div className={styles.productsCatalogContent}>
-                      <Filter />
+                      <Filter categories={categories} />
                       <div className={styles.productsCatalogProducts}>
                           <div className={styles.productsCatalogProductsContent}>
                               <div className={styles.productsCatalogText}>
@@ -94,12 +103,12 @@ export default function ProductsCatalog() {
                               </div>
                               <div className={styles.productsCatalogBlocks}>
                                   {products?.map(product => (
-                                      <Product key={product.id} product={product} />
+                                      <Product categories={categories} key={product.id} product={product} />
                                   ))}
                               </div>
                               <div className={styles.productsCatalogPagination}>
-                                  <button onClick={() => setCurrentProductsSize(prev => prev + 30)}>See more products</button>
-                                  <p>1-{currentProductsSize} of 6033</p>
+                                  <button onClick={() => setCurrentProductsPage(prev => prev + 1)}>See more products</button>
+                                  <p>1-{30} of 6033</p>
                               </div>
                           </div>
                       </div>

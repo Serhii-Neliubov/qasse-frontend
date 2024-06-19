@@ -2,7 +2,7 @@ import $api from "@utils/interceptors.ts";
 
 export class ProductsService {
     static async getProducts(size: number, page: number) {
-        const { data } = await $api.get(`/api/products`, {
+        const { data } = await $api.get(`/api/products/filter`, {
             params: {
                 size,
                 page

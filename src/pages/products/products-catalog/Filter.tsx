@@ -1,30 +1,15 @@
-import styles from "@pages/products/products-catalog/ProductsCatalog.module.scss";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import $api from "@utils/interceptors.ts";
-import {useEffect, useState} from "react";
 
-interface IFilterCategory {
-  category_id: number,
-  category_name: string,
-  product_count: string
+import styles from "@pages/products/products-catalog/ProductsCatalog.module.scss";
+
+interface FilterProps {
+  categories: any[];
 }
 
-export default function Filter() {
-  const [filterCategories, setFilterCategories] = useState<IFilterCategory[]>([]);
-
-  const getFilterCategories = () => {
-    $api.get('/api/category')
-      .then(response => setFilterCategories(response.data))
-      .catch(error => console.error(error));
-  }
-
-  useEffect(() => {
-    getFilterCategories();
-  }, []);
-
+export default function Filter({categories}: FilterProps) {
   return (
     <div className={styles.filterBlocks}>
       <div className={styles.productsCatalogFilter}>
@@ -37,7 +22,7 @@ export default function Filter() {
           >
             Category
           </AccordionSummary>
-          {filterCategories.map((category, index) =>
+          {categories.map((category, index) =>
             <div key={index} className={styles.filterCategoryText}>
               <div>
                 <input type='checkbox'/>
