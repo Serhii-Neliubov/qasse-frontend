@@ -614,6 +614,14 @@
     height: 450px;
   }
 }
+@media (max-width: 576px) {
+  .joinOurCommunityBlocks{
+    display: none;
+  }
+  .joinOurCommunitySwiper{
+    display: block;
+  }
+}
 .skincareIngredients{
   background-color: white;
   padding-bottom: 120px;
@@ -714,6 +722,9 @@
   .skincareIngredientsBlock{
     width: 307px;
   }
+  .skincareIngredients{
+    padding-bottom: 50px;
+  }
 }
 .hero_descriptionMiddle{
   display: none;
@@ -768,20 +779,21 @@
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
   background: rgb(255, 255, 255);
   align-items: center;
-
-  & > span {
-    text-align: center;
-    color: #3C164F;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", sans-serif;
-    font-weight: 800;
-  }
-
-  & > p {
-    color: #555555;
-    font-size: 16px;
-    font-family: Poppins, sans-serif;
-    text-align: center;
+  .skinPotentialText{
+    & > span {
+      text-align: center;
+      color: #3C164F;
+      font-size: 24px;
+      font-family: "Cormorant Garamond", sans-serif;
+      font-weight: 800;
+    }
+  
+    & > p {
+      color: #555555;
+      font-size: 16px;
+      font-family: Poppins, sans-serif;
+      text-align: center;
+    }
   }
 }
 .skinPotentialImg {
@@ -829,7 +841,15 @@
     border: none;
   }
 }
+.joinOurCommunitySwiper{
+  display: none;
+}
 @media (max-width: 576px) {
+  .skinPotentialBlocksColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
   .skincareOptimizerTextParagraphMiddle{
     display: block;
     margin-bottom: 30px;
@@ -844,6 +864,19 @@
       font-size: 16px;
       text-align: center;
       margin: 0px 20px 0px;
+    }
+  }
+  .skinPotentialText{
+    & > span {
+      text-align: center;
+      color: #3C164F;
+      font-size: 24px;
+      font-family: "Cormorant Garamond", sans-serif;
+      font-weight: 800;
+    }
+  
+    & > p {
+      font-size: 14px;
     }
   }
   .autocomplete {
@@ -874,7 +907,6 @@
     display: flex;
     flex-direction: column;
     max-width: 568px;
-    flex-wrap: nowrap;
     gap: 0px;
   }
   .skinPotentialBlock{

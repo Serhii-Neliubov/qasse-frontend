@@ -335,15 +335,19 @@ export default function Home() {
                   <div className={styles.skinPotentialImg}>
                     <img src={skinRedditImg} alt='icon image'/>
                   </div>
+                  <div className={styles.skinPotentialText}>
                   <span>Reddit Rediscovered</span>
                   <p>We find the hidden gems, Stories/Insights so you don’t have to!</p>
+                </div>
                 </div>
                 <div className={styles.skinPotentialBlock}>
                   <div className={styles.skinPotentialImg}>
                     <img src={skinMessageImg} alt='icon image'/>
                   </div>
+                  <div className={styles.skinPotentialText}>
                   <span>Qasse Aggregated Peer Reviews</span>
                   <p>With in-depth analysis for your smart shopping!</p>
+                  </div>
                 </div>
               </div>
               <div className={styles.skinPotentialBlocksColumn}>
@@ -351,15 +355,19 @@ export default function Home() {
                   <div className={styles.skinPotentialImg}>
                     <img src={skinFireImg} alt='icon image'/>
                   </div>
+                  <div className={styles.skinPotentialText}>
                   <span>Find Dupes & Trending Deals</span>
-                  <p>Save money! Save your time!</p>
+                  <p>Save money! Save your time!</p>
+                  </div>
                 </div>
                 <div className={styles.skinPotentialBlock}>
                   <div className={styles.skinPotentialImg}>
                     <img src={skinSunImg} alt='icon image'/>
                   </div>
+                  <div className={styles.skinPotentialText}>
                   <span>Qasse GlowFinder</span>
-                  <p>Find the best skincare centers here. Your skincare needs Directory!</p>
+                  <p>Find the best skincare centers here. Your skincare needs Directory!</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -456,6 +464,46 @@ export default function Home() {
                 <span>Top Pickss</span>
               </div>
             </div>
+            <div className={styles.joinOurCommunitySwiper}>
+            <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                pagination={{clickable: true}}
+                spaceBetween={30}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                style={{width: '100%', maxWidth: '100%'}}
+              >
+                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlockImg}>
+                  <img src={achievementImg} alt='Image icon'/>
+                </div>
+                <span>Brand Spotlight</span>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlockImg}>
+                  <img src={groupPeopleImg} alt='Image icon'/>
+                </div>
+                <span>Best Review</span>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlockImg}>
+                  <img src={bookImg} alt='Image icon'/>
+                </div>
+                <span>Comparison Guide</span>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlockImg}>
+                  <img src={messageImg} alt='Image icon'/>
+                </div>
+                <span>Expert Tips</span>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlockImg}>
+                  <img src={likeImg} alt='Image icon'/>
+                </div>
+                <span>Top Pickss</span>
+                </SwiperSlide>
+              </Swiper>
+              </div>
             <div className={styles.joinOurCommunityBlockContainer}>
               <div className={styles.joinOurCommunityBlockContent}>
                 <div className={styles.joinOurCommunityBlockText}>
