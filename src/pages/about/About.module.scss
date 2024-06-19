@@ -391,7 +391,7 @@
 }
 
 .joinOurCommunityContent {
-  width: 1350px;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -576,7 +576,6 @@
     }
   }  .joinOurCommunityContent {
     flex-direction: column;
-    width: 800px;
     height: 450px;
   }
   .heroImg1 {
@@ -597,6 +596,21 @@
       text-align: center;
     }
 
+  }
+}
+@media (max-width: 1587px) {
+  .heroImg4{
+    display: none;
+  }
+}
+@media (max-width: 805px) {
+  .glowIntelligentlyMiddleImg1{
+    margin-left: 0;
+  }
+}
+@media (max-width: 750px) {
+  .healthyMiddle{
+    width: 400px;
   }
 }
 
@@ -745,7 +759,6 @@
     }
     .joinOurCommunityContent {
       flex-direction: column;
-      width: 390px;
       height: 295px;
     }
 }

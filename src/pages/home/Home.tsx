@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
+import {A11y, Navigation, Pagination, Scrollbar, Grid} from "swiper/modules";
 
 import Header from "@components/header/Header.tsx";
 import Footer from "@components/footer/Footer.tsx";
@@ -39,6 +39,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import './Swiper.scss';
 import styles from "./Home.module.scss";
 
 const top100Films = [
@@ -244,12 +245,13 @@ export default function Home() {
             </div>
             <div className={styles.skincareIngredientsCarusel}>
               <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              pagination={{ clickable: true }}
-              spaceBetween={30}
-              slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
-              style={{ width: '100%', maxWidth: '100%' }}
-              >
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                pagination={{ clickable: true }}
+                spaceBetween={30}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                style={{ width: '100%', maxWidth: '100%' }}
+                className="skincareIngredientsProducts"
+                >
               <SwiperSlide>
                 <div className={styles.skincareIngredientsBlock}>
                 <div>
@@ -258,8 +260,6 @@ export default function Home() {
                 <h3>Sodium Hyaluronate</h3>
                 <p>Lorem ipsum dolor sit amet,</p>
                 </div>
-                </SwiperSlide>
-                <SwiperSlide>
                 <div className={styles.skincareIngredientsBlock}>
                 <div>
                 710 products
@@ -276,8 +276,6 @@ export default function Home() {
                 <h3>Sodium Hyaluronate</h3>
                 <p>Lorem ipsum dolor sit amet,</p>
                 </div>
-                </SwiperSlide>
-                <SwiperSlide>
                 <div className={styles.skincareIngredientsBlock}>
                 <div>
                 710 products
@@ -294,8 +292,6 @@ export default function Home() {
                 <h3>Sodium Hyaluronate</h3>
                 <p>Lorem ipsum dolor sit amet,</p>
                 </div>
-                </SwiperSlide>
-                <SwiperSlide>
                 <div className={styles.skincareIngredientsBlock}>
                 <div>
                 710 products
@@ -312,8 +308,6 @@ export default function Home() {
                 <h3>Sodium Hyaluronate</h3>
                 <p>Lorem ipsum dolor sit amet,</p>
                 </div>
-                </SwiperSlide>
-                <SwiperSlide>
                 <div className={styles.skincareIngredientsBlock}>
                 <div>
                 710 products

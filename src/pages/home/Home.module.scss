@@ -614,12 +614,6 @@
     height: 450px;
   }
 }
-.swiperContainer {
-  width: 100%; 
-}
-.swiperWrapper {
-  display: flex;
-}
 .skincareIngredients{
   background-color: white;
   padding-bottom: 120px;
@@ -713,7 +707,7 @@
   }
   .skincareIngredientsCarusel {
     display: block;
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     overflow: hidden;
   }

@@ -1,0 +1,17 @@
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .skincareIngredientsProducts{
+    margin-top: 30px;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }
