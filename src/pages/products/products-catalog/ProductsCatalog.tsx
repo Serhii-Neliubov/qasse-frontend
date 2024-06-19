@@ -18,13 +18,22 @@ import 'swiper/css/pagination';
 import styles from "./ProductsCatalog.module.scss";
 
 export default function ProductsCatalog() {
-    const [, setProducts] = useState<IProduct[]>([]);
+    const [currentProductsSize, setCurrentProductsSize] = useState<number>(30);
+    const [products, setProducts] = useState<IProduct[]>([]);
+
+    const getProducts = async () => {
+        try {
+            const products = await ProductsService.getProducts(currentProductsSize, 1);
+            return products.items;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     useEffect(() => {
-        ProductsService.getProducts('', 10)
-            .then(products => setProducts(products))
-            .catch(error => console.error(error));
-    }, []);
+        getProducts()
+          .then(products => setProducts(products));
+    }, [currentProductsSize]);
 
     return (
         <>
@@ -56,8 +65,6 @@ export default function ProductsCatalog() {
                                     pagination={{ clickable: true }}
                                     slidesPerView={7}
                                     className={styles.productsSwiper}
-                                    onSlideChange={() => console.log('slide change')}
-                                    onSwiper={(swiper) => console.log(swiper)}
                                   >
                                       <SwiperSlide className={styles.productsSwiperSlide}>
                                           <img src={productImg} alt='Image'/>
@@ -86,15 +93,13 @@ export default function ProductsCatalog() {
                                   </Swiper>
                               </div>
                               <div className={styles.productsCatalogBlocks}>
-                                  <Product />
-                                  <Product />
-                                  <Product />
-                                  <Product />
-                                  <Product />
+                                  {products?.map(product => (
+                                      <Product key={product.id} product={product} />
+                                  ))}
                               </div>
                               <div className={styles.productsCatalogPagination}>
-                                  <button>See more products</button>
-                                  <p>1-30 of 6033</p>
+                                  <button onClick={() => setCurrentProductsSize(prev => prev + 30)}>See more products</button>
+                                  <p>1-{currentProductsSize} of 6033</p>
                               </div>
                           </div>
                       </div>

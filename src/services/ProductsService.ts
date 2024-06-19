@@ -1,26 +1,26 @@
-import axios from "axios";
+import $api from "@utils/interceptors.ts";
 
 export class ProductsService {
-    static async getProducts(category: string, page: number) {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/store/get-products/`, {
+    static async getProducts(size: number, page: number) {
+        const { data } = await $api.get(`/api/products`, {
             params: {
-                category: JSON.stringify(category), // JSON.stringify must be for truly request to server
-                page: page
+                size,
+                page
             }
         });
 
-        return data.response.products;
+        return data;
     }
 
     static async getProductById(id: string) {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/store/get-product/?product_id=${id}`);
+        const { data } = await $api.get(`/store/get-product/?product_id=${id}`);
 
         return data.response.product;
     }
 
     // TODO: change the link to the real one
     static async getTotalPages(category: string) {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/store/get-total-pages/`, {
+        const { data } = await $api.get(`/store/get-total-pages/`, {
             params: {
                 category: JSON.stringify(category)
             }

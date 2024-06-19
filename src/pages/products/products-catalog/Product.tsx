@@ -1,25 +1,28 @@
 import {Link} from "react-router-dom";
 
-import productImg from "@assets/products-catalog/img.png";
 import Rating from "@mui/material/Rating";
 
 import styles from "./ProductsCatalog.module.scss";
+import {IProduct} from "@models/IProduct.ts";
 
-export default function Product() {
+interface IProductProps {
+  product: IProduct;
+}
+
+export default function Product({product}: IProductProps) {
   return (
     <div className={styles.productsCatalogBlock}>
       <div className={styles.productsCatalogBlockImg}>
-        <img src={productImg} alt='Image'/>
+        <img src={product.image} alt='Image' />
       </div>
       <div className={styles.productsCatalogBlockInfo}>
-        <div className={styles.productsCatalogCategory}>Cleansers</div>
-        <h2 className={styles.productsCatalogTitle}>Tolerant Hydrating Gentle Face
-          Cleanser ingredients Explained</h2>
+        <div className={styles.productsCatalogCategory}>{product.category.name}</div>
+        <h2 className={styles.productsCatalogTitle}>{product.title}</h2>
         <div className={styles.productsCatalogRating}>
           <Rating name="read-only" value={5} readOnly />
           <span>(05)</span>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...</p>
+        <p>{product.description}</p>
         <div className={styles.productsCatalogActions}>
           <button>
             <Link to='/products'>More Details</Link>
@@ -29,7 +32,7 @@ export default function Product() {
       </div>
       <div className={styles.productsCatalogBlockPrice}>
         See prices:
-        <span> $18.00</span>
+        <span> ${product.sell_price}</span>
       </div>
     </div>
   )

@@ -56,4 +56,16 @@ export default class AuthService {
             console.error(error)
         }
     }
+
+    static async logout() {
+        try {
+            await $api.post('/auth/logout');
+
+            localStorage.removeItem('token');
+
+            return true;
+        } catch (error) {
+            console.error(error)
+        }
+    }
 }
