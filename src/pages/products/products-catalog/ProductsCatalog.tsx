@@ -3,6 +3,7 @@ import { Navigation, Pagination, A11y } from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 
 import {ProductsService} from "@services/ProductsService.ts";
+import $api from "@utils/interceptors.ts";
 
 import {IProduct} from "@models/IProduct.ts";
 import Footer from "@components/footer/Footer.tsx";
@@ -16,16 +17,16 @@ import productImg from "@assets/products-catalog/img.png";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from "./ProductsCatalog.module.scss";
-import $api from "@utils/interceptors.ts";
 
 export default function ProductsCatalog() {
-    const [currentProductsPage, setCurrentProductsPage] = useState<number>(1);
+    const [currentProductsPage, setCurrentProductsPage] = useState<number>(0);
     const [products, setProducts] = useState<IProduct[]>([]);
     const [categories, setCategories] = useState([]);
+    const [filters, setFilters] = useState<string[]>([]);
 
     const getProducts = async () => {
         try {
-            const products = await ProductsService.getProducts(30, currentProductsPage);
+            const products = await ProductsService.getProducts(30, currentProductsPage, filters as string[]);
             return products.items;
         } catch (error) {
             console.error(error);
@@ -35,8 +36,7 @@ export default function ProductsCatalog() {
     useEffect(() => {
         getProducts()
           .then(products => setProducts(products));
-
-    }, [currentProductsPage]);
+    }, [currentProductsPage, filters]);
 
     useEffect(() => {
         $api.get('/api/category')
@@ -57,7 +57,7 @@ export default function ProductsCatalog() {
               </div>
               <div className={styles.productsCatalog}>
                   <div className={styles.productsCatalogContent}>
-                      <Filter categories={categories} />
+                      <Filter categories={categories} setFilters={setFilters} filters={filters} />
                       <div className={styles.productsCatalogProducts}>
                           <div className={styles.productsCatalogProductsContent}>
                               <div className={styles.productsCatalogText}>

@@ -1,11 +1,12 @@
 import $api from "@utils/interceptors.ts";
 
 export class ProductsService {
-    static async getProducts(size: number, page: number) {
+    static async getProducts(size: number, page: number, category_id?: string[]) {
         const { data } = await $api.get(`/api/products/filter`, {
             params: {
                 size,
-                page
+                page,
+                category_id
             }
         });
 

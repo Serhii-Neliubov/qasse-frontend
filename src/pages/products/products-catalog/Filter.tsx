@@ -7,9 +7,11 @@ import styles from "@pages/products/products-catalog/ProductsCatalog.module.scss
 
 interface FilterProps {
   categories: any[];
+  setFilters: (filters: string[]) => void;
+  filters: string[];
 }
 
-export default function Filter({categories}: FilterProps) {
+export default function Filter({categories, setFilters, filters}: FilterProps) {
   return (
     <div className={styles.filterBlocks}>
       <div className={styles.productsCatalogFilter}>
@@ -22,14 +24,16 @@ export default function Filter({categories}: FilterProps) {
           >
             Category
           </AccordionSummary>
+
           {categories.map((category, index) =>
             <div key={index} className={styles.filterCategoryText}>
               <div>
-                <input type='checkbox'/>
+                <input onChange={() => setFilters([...filters, category.category_id])} type='checkbox'/>
                 <span>{category.category_name}</span>
               </div>
               <span>{category.product_count}</span>
             </div>)}
+
         </Accordion>
         <Accordion className={styles.accordionFilter}>
           <AccordionSummary
