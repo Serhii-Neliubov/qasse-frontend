@@ -148,7 +148,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{ clickable: true }}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{ width: '100%', maxWidth: '100%' }}
               >
                 <SwiperSlide>
@@ -248,7 +248,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{ clickable: true }}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{ width: '100%', maxWidth: '100%' }}
                 className="skincareIngredientsProducts"
                 >
@@ -398,7 +398,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{clickable: true}}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{width: '100%', maxWidth: '100%'}}
               >
                 <SwiperSlide>
@@ -469,38 +469,49 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{clickable: true}}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.7 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{width: '100%', maxWidth: '100%'}}
+                className="joinOurCommunitySwiper"
               >
                 <SwiperSlide>
+                <div className={styles.joinOurCommunityBlock}>
                 <div className={styles.joinOurCommunityBlockImg}>
                   <img src={achievementImg} alt='Image icon'/>
                 </div>
                 <span>Brand Spotlight</span>
+              </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className={styles.joinOurCommunityBlockImg}>
-                  <img src={groupPeopleImg} alt='Image icon'/>
-                </div>
-                <span>Best Review</span>
-                </SwiperSlide>
-                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlock}>
                 <div className={styles.joinOurCommunityBlockImg}>
                   <img src={bookImg} alt='Image icon'/>
                 </div>
                 <span>Comparison Guide</span>
+              </div>
                 </SwiperSlide>
                 <SwiperSlide>
+                <div className={styles.joinOurCommunityBlock}>
                 <div className={styles.joinOurCommunityBlockImg}>
-                  <img src={messageImg} alt='Image icon'/>
+                  <img src={groupPeopleImg} alt='Image icon'/>
                 </div>
-                <span>Expert Tips</span>
+                <span>Best Review</span>
+              </div>
                 </SwiperSlide>
                 <SwiperSlide>
+                <div className={styles.joinOurCommunityBlock}>
+                <div className={styles.joinOurCommunityBlockImg}>
+                  <img src={bookImg} alt='Image icon'/>
+                </div>
+                <span>Comparison Guide</span>
+              </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className={styles.joinOurCommunityBlock}>
                 <div className={styles.joinOurCommunityBlockImg}>
                   <img src={likeImg} alt='Image icon'/>
                 </div>
                 <span>Top Pickss</span>
+              </div>
                 </SwiperSlide>
               </Swiper>
               </div>
