@@ -63,7 +63,6 @@ export default function ProductPage() {
                                 <div className={styles.productRating}></div>
                                 <div className={styles.productInfoActions}></div>
                                 <div className={styles.productInfoLinks}></div>
-
                             </div>
                         </div>
                     </div>

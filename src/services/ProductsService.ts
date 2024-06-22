@@ -26,4 +26,20 @@ export class ProductsService {
             console.error(error);
         }
     }
+
+    static async getProductBySearch(value: string) {
+        try {
+            const { data } = await $api.get('/api/products/search', {
+                params: {
+                    text: value,
+                    page: 1,
+                    size: 10
+                }
+            });
+
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 }

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import useInput from "../../hooks/useInput.tsx";
+import useInput from "@hooks/useInput.tsx";
 import styles from "./Header.module.scss";
 import { CiSearch } from "react-icons/ci";
 import HeaderLink from "./HeaderLink.tsx";
-import logo from '../../assets/logo.svg';
+import logo from '@assets/logo.svg';
 import { useState } from "react";
+import {ProductsService} from "@services/ProductsService.ts";
 
 const links = [
     { name: 'Home', path: '/' },
@@ -20,6 +21,19 @@ export default function Header() {
     const handleToggleMenu = () => {
         setIsOpen((prev) => !prev);
     };
+
+    async function productSearchHandler() {
+        try {
+            if (!search.value) {
+                return;
+            }
+
+            const data = await ProductsService.getProductBySearch(search.value);
+            console.log(data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     return (
         <div className={styles.container}>
@@ -42,7 +56,7 @@ export default function Header() {
                 <div className={styles.navActions}>
                     <div className={styles.navSearch}>
                         <input {...search} className={styles.navSearch__input} placeholder='Find products' />
-                        <div className={styles.navSearch__image_box}>
+                        <div onClick={productSearchHandler} className={styles.navSearch__image_box}>
                             <CiSearch className={styles.navSearch__image} />
                         </div>
                     </div>

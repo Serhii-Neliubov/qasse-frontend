@@ -1,3 +1,5 @@
+import $api from "@utils/interceptors.ts";
+
 export class EmailServices {
     public static contactUs(name: string, email: string, phoneNumber: string, message: string): void {
         try {
@@ -6,13 +8,13 @@ export class EmailServices {
             }
 
             const body = {
-                name,
-                email,
+                name: name,
+                email: email,
                 phone_number: phoneNumber,
-                message
+                message: message
             }
 
-            console.log('Email sent successfully', body);
+            $api.post('/api/emails/contact-us', body);
         } catch (e) {
             console.error(e);
         }
