@@ -469,7 +469,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{clickable: true}}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 750 ? 2 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{width: '100%', maxWidth: '100%'}}
                 className="joinOurCommunitySwiper"
               >

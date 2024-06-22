@@ -146,6 +146,9 @@
   color: #3C164F;
 }
 @media (max-width: 1250px) {
+  .hero_container {
+    position: relative;
+  }
   .hero {
     padding-top: 110px;
     padding-bottom: 200px;
@@ -194,13 +197,13 @@
   }
   .hero_person_img {
     width: 300px;
-    margin-top: -100px;
-    margin-right: 300px;
+    top: 50px;
+    right: 100px;
   }
   .hero_bottleImg_img {
     width: 700px;
-    top: -100px;
-    left: 750px;
+    top: -150px;
+    right: -380px;
   }
   .hero_title {
     padding: 0px 20px;
@@ -212,10 +215,14 @@
     }
   }
   .hero_branchImg_img {
-    display: none;
+    right: 352px;
+    bottom: -80px;
   }
   .hero_arrowRight_img {
-    display: none;
+    right: 370px;
+    bottom: -150px;
+    width: 160px;
+
   }
   .hero_descriptionMiddle {
     display: block;
@@ -228,7 +235,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1170px) {
   .hero {
     padding-top: 110px;
   }
@@ -276,13 +283,13 @@
   }
   .hero_person_img {
     width: 250px;
-    margin-bottom: 150px;
-    margin-right: 210px;
+    top: 20px;
+    right: 130px;
   }
   .hero_bottleImg_img {
     width: 500px;
     top: -100px;
-    left: 680px;
+    right: -200px;
   }
   .hero_title {
     padding: 0px 20px;
@@ -294,10 +301,15 @@
     }
   }
   .hero_branchImg_img {
-    display: none;
+    width: 80px;
+    right: 352px;
+    bottom: 40px;
+    
   }
   .hero_arrowRight_img {
-    display: none;
+    right: 350px;
+    bottom: -20px;
+    width: 90px;
   }
   .hero_descriptionMiddle {
     display: block;
@@ -309,15 +321,69 @@
     margin: 0px 20px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1003px) {
+  .hero{
+    padding-bottom: 700px;
+  }
   .hero_container {
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+  .hero_person_img{
+    width: 300px;
+    top: 550px;
+    right: 250px;
+  }
+  .hero_bottleImg_img {
+    width: 700px;
+    top: 350px;
+    right: -238px;
+  }
+  .hero_branchImg_img {
+    right: 500px;
+    bottom: -500px;
+    width: 120px;
+  }
+  .hero_arrowRight_img {
+    right: 510px;
+    bottom: -530px;
+    width: 120px;
+  }
+  .hero_starBetween_img{
+    display: none;
   }
 }
-@media (max-width: 576px) {
+
+@media (max-width: 927px) {
+  .hero_text {
+    width: 60%;
+    .hero_title {
+      font-size: 27px;
+      margin-left: 45px;
+      margin-bottom: 15px;
+    }
+    .hero_subtitle{
+      font-size: 14px;
+    }
+    .hero_person_img{
+      width: 200px;
+      margin-top: 250px;
+      margin-left: 140px;
+    }
+}
+}
+@media (max-width: 779px) {
+  .hero_branchImg_img {
+    right: 350px;
+    bottom: -400px;
+    width: 120px;
+  }
+  .hero_arrowRight_img {
+    display: none;
+  }
   .hero{
-    padding: 0px;
+    padding-bottom: 500px;
   }
   .hero_container{
     display: flex;
@@ -325,18 +391,17 @@
     align-items: center;
     flex-direction: column;
     .hero_person_img{
-      position: static;
       width: 239.91px;
       height: 349px;
-      margin: 50px auto;
-      margin-top: 132.34px;
+      right: 150px;
+      top: 400px;
     }
   }
   .hero_bottleImg_img{
     width: 420px;
     height: 454.55px;
     top: 310px;
-    left: 169px;
+    right: -100px;
   }
   .hero_text {
     width: 100%;
@@ -993,6 +1058,11 @@
       font-size: 12px;
     }
   }
+  .checkCompatibilityContainer{
+    & > button{
+      width: 70%;
+    }
+  }
 }
 @media (max-width: 576px) {
   .skincareIngredientsBlocks{
@@ -1277,10 +1347,6 @@
         text-align: start;
       }
     }
-    .autocomplete {
-      width: 390px;
-      margin-top: 10px;
-    }
   }
   .skinPotentialBlock {
     display: flex;  
@@ -1306,6 +1372,10 @@
   .skinPotential {
     padding: 50px 0;
     background-color: rgba(253, 246, 255, 1);
+  }
+  .autocomplete {
+    width: 390px;
+    margin-top: 10px;
   }
 }
 .companyAdvantages {
