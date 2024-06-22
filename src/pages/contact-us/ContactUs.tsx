@@ -1,5 +1,6 @@
 import React from "react";
-import axios from "axios";
+
+import { EmailServices } from "@services/EmailServices.ts";
 
 import useInput from "@hooks/useInput.tsx";
 import Header from "@components/header/Header.tsx";
@@ -19,16 +20,7 @@ export default function ContactUs() {
         event.preventDefault();
 
         try {
-            if(!name.value || !email.value || !phoneNumber.value || !message.value){
-              return console.log('Please fill all the fields');
-            }
-
-            await axios.post(`${import.meta.env.API_URL}/contact-us`, {
-              name: name.value,
-              email: email.value,
-              phoneNumber: phoneNumber.value,
-              message: message.value
-            });
+            EmailServices.contactUs(name.value, email.value, phoneNumber.value, message.value);
         } catch (e) {
             console.error(e);
         }
