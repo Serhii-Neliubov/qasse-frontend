@@ -80,7 +80,7 @@ export default function Home() {
               <h1 className={styles.hero_title}>Search engine built <img src={textUpImg} alt='Text image' className={styles.hero_img1}/>
                 exclusively for <img src={textDownImg} alt='Text image' className={styles.hero_img}/> skincare
               </h1>
-              <span className={styles.hero_subtitle}>Revolutionizing Skincare, One Ingredient at a Time.Explore. Analyze. Thrive with Qasse.</span>
+              <span className={styles.hero_subtitle}>Revolutionizing Skincare, One Ingredient at a Time. Explore. Analyze. Thrive with Qasse.</span>
               <p className={styles.hero_description}>Qasse is your intelligent companion, guiding you through
                 product compatibility, ingredient
                 education, personalized routines, and in-depth product analysis with aggregated user reviews
@@ -148,7 +148,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{ clickable: true }}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.7 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{ width: '100%', maxWidth: '100%' }}
               >
                 <SwiperSlide>
@@ -181,9 +181,9 @@ export default function Home() {
         </div>
         <div className={styles.skincareIngredients}>
           <div className={styles.skincareIngredientsContent}>
-            <h2>Skincare Ingredients Glossary:
-              learn about your ingredients list here</h2>
-            <p>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting
+            <h2>Skincare Ingredients Glossary:<br/>
+            learn about your ingredients list here</h2>
+            <p>Qasse helps you optimize your skincare routine by identifying compatible <br/> products and suggesting
               alternatives for your specific skin type or concerns.</p>
             <div className={styles.skincareIngredientsBlocks}>
               <div className={styles.skincareIngredientsBlock}>
@@ -248,7 +248,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{ clickable: true }}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.7 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{ width: '100%', maxWidth: '100%' }}
                 className="skincareIngredientsProducts"
                 >
@@ -326,7 +326,7 @@ export default function Home() {
             <div className={styles.skinPotentialText}>
               <h2>Unlock Your Skin's Potential
                 with Confidence</h2>
-              <p>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting alternatives for your specific skin type or concerns. Try it now for a smoother, clearer complexion.</p>
+              <p className={styles.skinPotentialTextParagraph}>Qasse helps you optimize your skincare routine by identifying compatible products and suggesting alternatives for your specific skin type or concerns. Try it now for a smoother, clearer complexion.</p>
               <button>Explore More</button>
             </div>
             <div className={styles.skinPotentialBlocks}>
@@ -353,7 +353,7 @@ export default function Home() {
               <div className={styles.skinPotentialBlocksColumn}>
                 <div className={styles.skinPotentialBlock}>
                   <div className={styles.skinPotentialImg}>
-                    <img src={skinFireImg} alt='icon image'/>
+                    <img src={skinFireImg} alt='icon image' className={styles.skinPotentialImgImg}/>
                   </div>
                   <div className={styles.skinPotentialText}>
                   <span>Find Dupes & Trending Deals</span>
@@ -398,7 +398,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{clickable: true}}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.7 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 3 : width < 1280 ? 3 : 4}
                 style={{width: '100%', maxWidth: '100%'}}
               >
                 <SwiperSlide>
@@ -469,7 +469,7 @@ export default function Home() {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 pagination={{clickable: true}}
                 spaceBetween={30}
-                slidesPerView={width < 576 ? 1.7 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
+                slidesPerView={width < 576 ? 1.5 : width < 1024 ? 2 : width < 1280 ? 3 : 4}
                 style={{width: '100%', maxWidth: '100%'}}
                 className="joinOurCommunitySwiper"
               >

@@ -147,70 +147,8 @@
 }
 @media (max-width: 1250px) {
   .hero {
-    padding: 0;
-  }
-  .hero_starRight_img {
-    display: none;
-  }
-  .hero_subtitle {
-    font-size: 25px;
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .hero_text {
-    width: 100%;
-  }
-  .hero_title {
-    font-size: 40px;
-    margin: 0 auto;
-  }
-  .hero_title > img:first-of-type {
-    width: 130px;
-    height: 60px;
-    margin-left: 5px;
-  }
-  .hero_description {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .hero_container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero_person_img {
-    position: static;
-    width: 400px;
-    margin: 160px auto;
-  }
-  .hero_bottleImg_img {
-    top: 300px;
-    left: 44%;
-  }
-  .hero_buttons {
-    margin: 0 auto;
-  }
-  .hero_title {
-    padding: 0px 20px;
-    font-size: 24px;
-    align-items: center;
-  }
-  .hero_title > img {
-    width: 98px;
-    height: 40px;
-  }
-  .hero_branchImg_img {
-    display: none;
-  }
-  .hero_arrowRight_img {
-    display: none;
-  }
-}
-
-@media (max-width: 1180px) {
-  .hero {
-    padding: 0;
+    padding-top: 110px;
+    padding-bottom: 200px;
   }
   .hero_subtitle {
     font-size: 18px;
@@ -218,11 +156,33 @@
     text-align: center;
   }
   .hero_text {
-    width: 100%;
+    width: 60%;
+    .hero_title {
+      font-size: 30px;
+      margin-left: 45px;
+      margin-bottom: 15px;
+    }
+    .hero_subtitle{
+      width: 70%;
+      font-size: 16px;
+      margin-left: 60px;
+      text-align: start;
+    }
+    .hero_description{
+      font-size: 14px;
+      margin-left: 60px;
+      text-align: start;
+      width: 85%;
+      margin-bottom: 15px;
+    }
+    .hero_buttons{
+      margin-left: 60px;
+    }
   }
-  .hero_title {
-    font-size: 20px;
-    margin: 0 auto;
+  .hero_starBetween_img {
+    position: absolute;
+    left: 480px;
+    bottom: 0;
   }
   .hero_title > img:first-of-type {
     width: 130px;
@@ -232,19 +192,15 @@
   .hero_description {
     text-align: center;
   }
-  .hero_container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .hero_person_img {
-    position: static;
-    width: 400px;
-    margin: 160px auto;
+    width: 300px;
+    margin-top: -100px;
+    margin-right: 300px;
   }
   .hero_bottleImg_img {
-    top: 240px;
-    left: 44%;
+    width: 700px;
+    top: -100px;
+    left: 750px;
   }
   .hero_title {
     padding: 0px 20px;
@@ -271,8 +227,103 @@
     margin: 0px 20px;
   }
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 110px;
+  }
+  .hero_subtitle {
+    font-size: 18px;
+    max-width: 800px;
+    text-align: center;
+  }
+  .hero_text {
+    width: 60%;
+    .hero_title {
+      font-size: 40px;
+      margin-left: 45px;
+      margin-bottom: 15px;
+    }
+    .hero_subtitle{
+      width: 70%;
+      font-size: 16px;
+      margin-left: 60px;
+      text-align: start;
+    }
+    .hero_description{
+      font-size: 14px;
+      margin-left: 60px;
+      text-align: start;
+      width: 85%;
+      margin-bottom: 15px;
+    }
+    .hero_buttons{
+      margin-left: 60px;
+    }
+  }
+  .hero_starBetween_img {
+    position: absolute;
+    left: 480px;
+    bottom: 10px;
+  }
+  .hero_title > img:first-of-type {
+    width: 130px;
+    height: 60px;
+    margin-left: 5px;
+  }
+  .hero_description {
+    text-align: center;
+  }
+  .hero_person_img {
+    width: 250px;
+    margin-bottom: 150px;
+    margin-right: 210px;
+  }
+  .hero_bottleImg_img {
+    width: 500px;
+    top: -100px;
+    left: 680px;
+  }
+  .hero_title {
+    padding: 0px 20px;
+    font-size: 24px;
+    align-items: center;
+    & > img {
+      width: 98px;
+      height: 40px;
+    }
+  }
+  .hero_branchImg_img {
+    display: none;
+  }
+  .hero_arrowRight_img {
+    display: none;
+  }
+  .hero_descriptionMiddle {
+    display: block;
+    max-width: 816px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #555555;
+    text-align: center;
+    margin: 0px 20px;
+  }
+}
+@media (max-width: 950px) {
+  .hero_container {
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media (max-width: 576px) {
+  .hero{
+    padding: 0px;
+  }
   .hero_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .hero_person_img{
       position: static;
       width: 239.91px;
@@ -284,15 +335,16 @@
   .hero_bottleImg_img{
     width: 420px;
     height: 454.55px;
-    top: 350px;
+    top: 310px;
     left: 169px;
   }
   .hero_text {
     width: 100%;
     .hero_title {
-    padding: 0px 20px;
+    padding: 0;
     font-size: 31px;
     margin-bottom: 25px;
+    margin-left: 20px;
   
     & > img:first-of-type {
       width: 120px;
@@ -307,7 +359,9 @@
   .hero_subtitle{
     font-size: 18px;
     text-align: start;
-    margin: 0px 20px 25px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 92%;
   }
   .hero_description{
     display: none;
@@ -368,18 +422,34 @@
     color: #555555;
     max-width: 610px;
 }
-@media (max-width: 1190px) {
+@media (max-width: 1024px) {
   .checkCompatibility {
     background-color: white;
     padding: 50px 0;
   }
-  .checkCompatibilityDescription{
+  .skincareOptimizerTextParagraphMiddle{
     display: none;
   }
+  .checkCompatibilityDescription{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .checkCompatibilityContainer{
+    & > button{
+      margin-top: 19px;
+    }
+  }
+
+}
+@media (max-width: 950px) {
   .skincareOptimizerTextParagraphMiddle{
     display: block;
+    font-size: 16px;
+    text-align: start;
   }
 }
+
 @media (max-width: 576px) {
   .checkCompatibilityTitle{
     font-size: 32px;
@@ -434,12 +504,10 @@
     cursor: pointer;
   }
 }
-@media (max-width: 1358px) {
-  .skincareOptimizerContent{
-    justify-content: center;
+@media (max-width: 1250px) {
+  .skincareOptimizerTextParagraphMiddle{
+    display: none;
   }
-}
-@media (max-width: 1180px) {
   .skincareOptimizerText{
     & > h2{
       font-size: 32px;
@@ -453,11 +521,38 @@
       margin: 0px 20px 30px;
     }
   }
-  .skincareOptimizerTextParagraph{
-    display: none;
+  .skincareOptimizerContent{
+    margin: 0px 60px;
+    .skincareOptimizerText{
+      & > h2{
+        font-size: 35px;
+        text-align: start;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .skincareOptimizerText{
+    & > h2{
+      font-size: 32px;
+      text-align: center;
+    }
+    .skincareOptimizerTextParagraphMiddle{
+      font-size: 16px;
+      color: #555555;
+      font-family: Poppins, sans-serif;
+      text-align: center;
+      margin: 0px 20px 30px;
+    }
   }
   .skincareOptimizerContent{
-    flex-direction: column;
+    margin: 0px 60px;
+    .skincareOptimizerText{
+      & > h2{
+        font-size: 35px;
+        text-align: start;
+      }
+    }
   }
 }
 .favouriteProducts {
@@ -495,15 +590,27 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1024px) {
+  .favouriteProducts {
+    padding: 100px 0;
+  }
   .favouriteProductsContent{
     & > h2{
-  font-size: 32px;
-  text-align: center;
+    font-size: 32px;
+    text-align: center;
   }
+  .favouriteProductsContent { 
+    & > h2 {
+      margin-bottom: 30px;
+    }
+  }
+  
 }
 }
 @media (max-width: 576px) {
+  .favouriteProducts {
+    padding: 50px 0;
+  }
   .favouriteProductsContent{
     & > h2{
       margin-bottom: 30px;
@@ -611,11 +718,45 @@
 }
 @media (max-width: 1271px) {
   .joinOurCommunityBlockContent{
-    flex-direction: column;
-    height: 450px;
+    width: 90%;
+    padding: 0;
+    height: 250px;
     bottom: -240px;
     right: 50%;
   }
+  .joinOurCommunityBlock{
+    width: 170px;
+    padding: 21px 65px;
+    gap: 13px;
+    & > span{
+      font-size: 20px;
+      margin-top: 14px;
+    }
+    .joinOurCommunityBlockImg{
+      padding: 10px 10px;
+      width: 50px;
+      height: 50px;
+      & > img{ 
+        width: 40px;
+        left: 20px;
+        bottom: -9px; 
+      }
+    }
+  }
+  .joinOurCommunityBlockContent{
+    padding: 0px 40px;
+  }
+  .joinOurCommunityBlockText{
+    & > h2{
+      font-size: 35px;
+    }
+    & > p{
+      width: 60%;
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 950px) {
   .joinOurCommunitySwiper{
     margin-bottom: 70px;
   }
@@ -625,8 +766,6 @@
   .joinOurCommunityBlocks{
     display: none;
   }
-}
-@media (max-width: 1135px) {
   .joinOurCommunityBlockContent {
     flex-direction: column;
     height: 275px;
@@ -695,6 +834,8 @@
     padding-top: 50px;
   }
   .joinOurCommunityBlock{
+    width: 254px;
+    height: 180px;
     .joinOurCommunityBlockImg{
       margin-right:150px ;
     }
@@ -785,6 +926,72 @@
     color: #3C164F;
     font-family: Poppins, sans-serif;
     margin-top: 10px;
+  }
+}
+@media (max-width: 1250px) {
+  .skincareIngredientsBlocks{
+    gap: 20px;
+  }
+  .skincareIngredientsContent{
+    margin: 0px 40px;
+    & > h2{
+      width: 60%;
+      font-size: 40px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    & > p{
+      width: 60%;
+      font-size: 16px;
+      margin-bottom: 23px;
+    }
+    & > button{
+      margin-bottom: 100px;
+    }
+  }
+  .skincareIngredientsBlock{
+    & > div{
+      font-size: 16px;
+    }
+    & > h3{
+      font-size: 24px;
+    }
+    & > p{
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .skincareIngredientsBlocks{
+    gap: 10px;
+  }
+  .skincareIngredientsContent{
+    margin: 0px 40px;
+    & > h2{
+      width: 63%;
+      font-size: 40px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    & > p{
+      width: 60%;
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+    & > button{
+      margin-bottom: 100px;
+    }
+  }
+  .skincareIngredientsBlock{
+    & > div{
+      font-size: 14px;
+    }
+    & > h3{
+      font-size: 20px;
+    }
+    & > p{
+      font-size: 12px;
+    }
   }
 }
 @media (max-width: 576px) {
@@ -916,40 +1123,103 @@
     border: none;
   }
 }
-@media (max-width: 1230px) {
-  .skinPotentialBlocks{
-    position: static;
-  }
+.skinPotentialBlocksColumnMiddle{
+  display: none;
+}
+@media (max-width: 1277px) {
   .skinPotentialContent{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0px 60px;
   }
-  .skinPotentialText{
-    & > button{
-      display: block;
-      margin-left: 250px;
-      margin-bottom: 50px;
+  .skinPotentialBlocksColumn {
+    gap: 15px;
+  }
+  .skinPotential {
+    padding: 60px 0px;
+  }
+  .skinPotentialBlock {
+    width: 160px;
+    padding: 18px 6px;
+    .skinPotentialImg{
+      height: 0;
+      & > img{
+        position: static;
+        width: 34px;
+        margin-bottom: 12px;
+        margin-left: 15px;
+
+      }
+      .skinPotentialImgImg{
+        width: 28px;
+      }
+    }
+    .skinPotentialText{
+      margin-left: 0;
+      gap: 0px;
+      & > span{
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      & > p{
+        font-size: 10px;
+        text-align: center;
+        margin-left: 15px;
+      }
+    }
+    }
+    .skinPotentialText{
+      & > h2{
+        font-size: 35px;
+      }
+      & > p{
+        font-size: 14px;
+        width: 75%;
+      }
+      & > button{
+        display: block;
+        margin-bottom: 50px;
+      }
     }
   }
-}
 @media (max-width: 576px) {
+  .skincareOptimizerContainer{
+    padding: 50px 0px;
+  }
   .skinPotentialBlocksColumn {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  .skincareOptimizerTextParagraphMiddle{
-    display: block;
-    margin-bottom: 30px;
+  .skincareOptimizerContent{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    .skincareOptimizerTextParagraph{
+      display: none;
+    }
+    .skincareOptimizerText{
+      & > h2{
+        width: 100%;
+        font-size: 32px;
+        margin-left: 20px;
+      }
+      .skincareOptimizerTextParagraphMiddle{
+        display: block;
+        margin-bottom: 30px;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
   }
   .skincareIngredientsContent{
+    margin: 0 20px;
     & > h2{
+      width: 100%;
       font-size: 32px;
       margin-bottom: 15px;
       margin: 0px 20px 15px;
     }
     & > p{
+      width: 100%;
       font-size: 16px;
       text-align: center;
       margin: 0px 20px 0px;
@@ -958,24 +1228,9 @@
       margin-top: 30px;
     }
   }
-  .skinPotentialText{
-    & > span {
-      text-align: center;
-      color: #3C164F;
-      font-size: 24px;
-      font-family: "Cormorant Garamond", sans-serif;
-      font-weight: 800;
-    }
-  
-    & > p {
-      font-size: 14px;
-    }
-  }
-  .autocomplete {
-    width: 390px;
-    margin-top: 10px;
-  }
+
   .skinPotentialContent{
+    margin: 0px 20px;
     display: flex;
     flex-direction: column;
     .skinPotentialText{
@@ -987,9 +1242,10 @@
       & > p{
         font-size: 16px;
         text-align: center;
+        width: 100%;
       }
       & > button{
-        margin-left: 140px;
+        margin-left: 120px;
         margin-bottom: 30px;
       }
     }
@@ -1002,12 +1258,29 @@
     gap: 0px;
   }
   .skinPotentialBlock{
-    margin-left: 20px;
-    width: 390px;
+    width: 100%;
     height: 165px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    .skinPotentialText{
+      & > span {
+        text-align: center;
+        color: #3C164F;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", sans-serif;
+        font-weight: 800;
+      }
+    
+      & > p {
+        font-size: 14px;
+        text-align: start;
+      }
+    }
+    .autocomplete {
+      width: 390px;
+      margin-top: 10px;
+    }
   }
   .skinPotentialBlock {
     display: flex;  
@@ -1083,8 +1356,17 @@
 }
 
 @media (max-width: 1271px) {
+  .companyAdvantages {
+    background-color: white;
+    padding: 120px 0 120px 0;
+  }
+  .companyAdvantagesContent{
+    margin:0px 60px;
+    gap: 50px;
+  }
+}
+  @media (max-width: 950px) {
   .companyAdvantagesContent {
-    max-width: 1350px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
