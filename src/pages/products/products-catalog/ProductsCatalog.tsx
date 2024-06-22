@@ -19,11 +19,11 @@ import 'swiper/css/pagination';
 import styles from "./ProductsCatalog.module.scss";
 
 export default function ProductsCatalog() {
-    const [currentProductsPage, setCurrentProductsPage] = useState<number>(0);
+    const [currentProductsPage, setCurrentProductsPage] = useState<number>(1);
     const [products, setProducts] = useState<IProduct[]>([]);
     const [categories, setCategories] = useState([]);
     const [filters, setFilters] = useState<string[]>([]);
-    console.log(filters)
+
     const getProducts = async () => {
         try {
             const products = await ProductsService.getProducts(30, currentProductsPage, filters);
