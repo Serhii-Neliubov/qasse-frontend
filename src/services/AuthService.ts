@@ -49,7 +49,7 @@ export default class AuthService {
                 redirect_url: '/'
             };
 
-            const { data } = await $api.post('/auth/reset-password/', body);
+            const { data } = await $api.post('api/auth/reset-password/', body);
 
             return data.response;
         } catch (error) {
@@ -59,7 +59,7 @@ export default class AuthService {
 
     static async logout() {
         try {
-            await $api.post('/auth/logout');
+            await $api.post('api/auth/logout');
 
             localStorage.removeItem('token');
 

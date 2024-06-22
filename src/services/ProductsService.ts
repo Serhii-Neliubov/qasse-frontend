@@ -2,31 +2,44 @@ import $api from "@utils/interceptors.ts";
 
 export class ProductsService {
     static async getProducts(size: number, page: number, category_id?: string[]) {
-        const { data } = await $api.get(`/api/products`, {
-            params: {
-                size,
-                page,
-                category_id
-            }
-        });
+        try {
+            const { data } = await $api.get(`/api/products`, {
+                params: {
+                    size,
+                    page,
+                    category_id
+                }
+            });
 
-        return data;
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     static async getProductById(id: string) {
-        const { data } = await $api.get(`/store/get-product/?product_id=${id}`);
+        try {
+            const { data } = await $api.get(`/api/products/${id}`);
 
-        return data.response.product;
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
     }
 
-    // TODO: change the link to the real one
-    static async getTotalPages(category: string) {
-        const { data } = await $api.get(`/store/get-total-pages/`, {
-            params: {
-                category: JSON.stringify(category)
-            }
-        });
+    static async getProductBySearch(value: string) {
+        try {
+            const { data } = await $api.get('/api/products/search', {
+                params: {
+                    text: value,
+                    page: 1,
+                    size: 10
+                }
+            });
 
-        return data.response.total_pages;
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
