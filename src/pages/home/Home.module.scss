@@ -760,6 +760,7 @@
     color: white;
     font-family: Poppins, sans-serif;
     cursor: pointer;
+    white-space: nowrap;
   }
 }
 .joinOurCommunitySwiper{
@@ -810,6 +811,7 @@
   }
   .joinOurCommunityBlockContent{
     padding: 0px 40px;
+    
   }
   .joinOurCommunityBlockText{
     & > h2{
@@ -850,7 +852,10 @@
         margin-bottom: 15px;
       }
       & > p{
+        width: 90%;
         font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
       }
     }
   }
@@ -889,8 +894,9 @@
           margin-bottom: 15px;
         }
         & > p{
+          width: 90%;
           font-size: 16px;
-          margin: 0px 20px 30px;
+          margin: 0 auto;
         }
       }
     }
