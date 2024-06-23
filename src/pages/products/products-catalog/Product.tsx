@@ -1,10 +1,11 @@
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import Rating from "@mui/material/Rating";
 
-import styles from "./ProductsCatalog.module.scss";
 import {IProduct} from "@models/IProduct.ts";
 import {useEffect, useState} from "react";
+
+import styles from "./ProductsCatalog.module.scss";
 
 interface IProductProps {
   product: IProduct;
@@ -12,6 +13,7 @@ interface IProductProps {
 }
 
 export default function Product({product, categories}: IProductProps) {
+  const navigate = useNavigate();
   const [productCategory, setProductCategory] = useState<string>('');
 
   useEffect(() => {
@@ -34,8 +36,8 @@ export default function Product({product, categories}: IProductProps) {
         </div>
         <p>{product.description}</p>
         <div className={styles.productsCatalogActions}>
-          <button>
-            <Link to={`/products/${product.id}`}>More Details</Link>
+          <button onClick={() => navigate(`/products/${product.id}`)}>
+            <span>More Details</span>
           </button>
           <button>Compare</button>
         </div>

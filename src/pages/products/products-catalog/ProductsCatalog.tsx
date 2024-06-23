@@ -1,9 +1,8 @@
 import {useEffect, useState} from "react";
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import {A11y, Navigation, Pagination} from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 
 import {ProductsService} from "@services/ProductsService.ts";
-import $api from "@utils/interceptors.ts";
 
 import {IProduct} from "@models/IProduct.ts";
 import Footer from "@components/footer/Footer.tsx";
@@ -11,17 +10,22 @@ import Header from "@components/header/Header.tsx";
 import Product from "./Product.tsx";
 import Filter from "./Filter.tsx";
 
-import { VscSettings } from "react-icons/vsc";
+import {VscSettings} from "react-icons/vsc";
 import productImg from "@assets/products-catalog/img.png";
 
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from "./ProductsCatalog.module.scss";
 
+interface ICategory {
+    id: string;
+    name: string;
+}
+
 export default function ProductsCatalog() {
     const [currentProductsPage, setCurrentProductsPage] = useState<number>(1);
     const [products, setProducts] = useState<IProduct[]>([]);
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState<ICategory[]>([]);
     const [filters, setFilters] = useState<string[]>([]);
 
     const getProducts = async () => {
@@ -33,14 +37,24 @@ export default function ProductsCatalog() {
         }
     }
 
+    const getCategories = async () => {
+        try {
+            return await ProductsService.getProductCategories();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     useEffect(() => {
-        getProducts().then(products => setProducts(products));
+        getProducts()
+            .then(products => setProducts(products))
+            .catch(error => console.error(error));
     }, [currentProductsPage, filters]);
 
     useEffect(() => {
-        $api.get('/api/category')
-          .then(response => setCategories(response.data))
-          .catch(error => console.error(error));
+        getCategories()
+            .then(categories => setCategories(categories))
+            .catch(error => console.error(error));
     }, []);
 
     return (

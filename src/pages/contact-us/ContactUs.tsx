@@ -20,6 +20,10 @@ export default function ContactUs() {
         event.preventDefault();
 
         try {
+            if(!name || !email || !phoneNumber || !message){
+                return console.log('Please fill all the fields');
+            }
+
             EmailServices.contactUs(name.value, email.value, phoneNumber.value, message.value);
         } catch (e) {
             console.error(e);

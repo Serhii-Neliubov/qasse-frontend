@@ -42,4 +42,14 @@ export class ProductsService {
             console.error(error);
         }
     }
+
+    static async getProductCategories() {
+        try {
+            const { data } = await $api.get('/api/category');
+
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 }
