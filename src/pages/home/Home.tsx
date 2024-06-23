@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {A11y, Navigation, Pagination, Scrollbar, Grid} from "swiper/modules";
+import {A11y, Navigation, Pagination, Scrollbar} from "swiper/modules";
 
 import Header from "@components/header/Header.tsx";
 import Footer from "@components/footer/Footer.tsx";

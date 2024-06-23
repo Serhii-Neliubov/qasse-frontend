@@ -78,7 +78,6 @@
 
 .productInfoImage {
   max-width: 289px;
-  max-height: 349px;
   padding: 10px 0;
 
   border: 1px solid #E6E6E6;
@@ -116,10 +115,16 @@
     font-weight: 500;
   }
 }
-
+.productInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .productInfoBox {
   display: flex;
   gap: 30px;
+  color: #555555;
+  font-family: Poppins, sans-serif;
 
   h3 {
     font-size: 40px;
@@ -127,4 +132,174 @@
     color: #3C164F;
     max-width: 600px;
   }
+}
+
+.productRating {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.productIconsBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 1px solid #888888;
+  border-right: 1px solid #888888;
+  padding: 0 10px;
+}
+
+.productIconBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.productRatingBox {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.productActionsBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+    gap: 10px;
+    flex-direction: column;
+    width: 96px;
+    height: 96px;
+    border: 1px solid #E6E6E6;
+  }
+}
+
+.productActionsBoxImage {
+  width: 30px;
+  height: 30px;
+}
+
+.productInfoLinks {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.productInfoLink {
+  display: flex;
+  margin-top: 20px;
+  background-color: #FDF6FF;
+  border: 1px solid #3C164F;
+  padding: 9px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  span {
+    font-size: 24px;
+    font-family: "Cormorant Garamond", serif;
+    color: #3C164F;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    color: #6E6E6E;
+  }
+
+  &:hover {
+    background-color: #3C164F;
+    color: white;
+
+    span {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+  }
+}
+
+.productOverviewContent {
+  margin-top: 50px;
+
+  span {
+    font-size: 36px;
+    font-family: "Cormorant Garamond", sans-serif;
+    color: #3C164F;
+    text-transform: uppercase;
+  }
+}
+
+.productOverviewBoxes {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  flex-direction: column;
+  border: 1px solid #E6E6E6;
+  padding: 20px 30px;
+}
+
+.productOverviewBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  span {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    color: #000000;
+    padding-left: 20px;
+  }
+
+  & > div {
+    background-color: #FDF6FF;
+    padding: 10px 20px;
+  }
+}
+
+.productIngredientsList {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+  flex-direction: column;
+
+  span {
+    font-size: 36px;
+    font-family: "Cormorant Garamond", sans-serif;
+    color: #3C164F;
+    text-transform: uppercase;
+  }
+}
+
+.productIngredientsBoxes {
+    display: flex;
+    gap: 10px;
+  border: 1px solid #E6E6E6;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+
+.productIngredientsBox {
+  background-color: #F2F2F2;
+  padding: 10px 15px;
+  white-space: nowrap;
+  border-radius: 30px;
+
+  font-family: Poppins, sans-serif;
+  color: black;
+  font-size: 16px;
 }

@@ -25,13 +25,13 @@ export default function Footer() {
                                 <a href=''><img src={facebookImg} alt='Image'/></a>
                             </div>
                             <div className={styles.socialIcon}>
-                                <a><img src={twitterImg} alt='Image'/></a>
+                                <a href=''><img src={twitterImg} alt='Image'/></a>
                             </div>
                             <div className={styles.socialIcon}>
-                                <a><img src={linkedinImg} alt='Image'/></a>
+                                <a href=''><img src={linkedinImg} alt='Image'/></a>
                             </div>
                             <div className={styles.socialIcon}>
-                                <a><img src={instagramImg} alt='Image'/></a>
+                                <a href=''><img src={instagramImg} alt='Image'/></a>
                             </div>
                         </div>
                     </div>

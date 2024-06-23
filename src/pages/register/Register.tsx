@@ -30,8 +30,7 @@ export default function Register() {
 
         try {
             if(password.value !== confirmPassword.value) {
-                console.error('Passwords do not match');
-                return;
+                return console.error('Passwords do not match');
             }
 
             const body = {
