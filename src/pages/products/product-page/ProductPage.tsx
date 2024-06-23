@@ -16,6 +16,7 @@ import {BsBookmarkStar} from "react-icons/bs";
 import {HiOutlineArrowRight} from "react-icons/hi";
 
 import styles from './ProductPage.module.scss';
+import {SiTicktick} from "react-icons/si";
 
 export default function ProductPage() {
     const { id } = useParams();
@@ -203,6 +204,36 @@ export default function ProductPage() {
                                 <div className={styles.productIngredientsBox}>Isoceteth-20</div>
                                 <div className={styles.productIngredientsBox}>Ethoxydiglycol</div>
                                 <div className={styles.productIngredientsBox}>Water</div>
+                            </div>
+                        </div>
+                        <div className={styles.ingredientInfo}>
+                            <span>Ingredient info</span>
+                            <p>Click any item below to learn more and view relevant ingredients.</p>
+                            <div className={styles.ingredientsInfoList}>
+                                <div>
+                                    <SiTicktick color='#00A324'/>
+                                    Alcohol Free
+                                </div>
+                                <div>
+                                    <SiTicktick color='#00A324'/>
+                                    Alcohol Free
+                                </div>
+                                <div>
+                                    <SiTicktick color='#00A324'/>
+                                    Alcohol Free
+                                </div>
+                                <div>
+                                    <SiTicktick color='#00A324'/>
+                                    Alcohol Free
+                                </div>
+                                <div>
+                                    <SiTicktick color='#00A324'/>
+                                    Alcohol Free
+                                </div>
+                                <div>
+                                    <SiTicktick color='#00A324'/>
+                                    Alcohol Free
+                                </div>
                             </div>
                         </div>
                     </div>
