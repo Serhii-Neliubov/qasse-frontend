@@ -19,4 +19,8 @@ html, body {
     background: #5b006a !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 {/*TODO: Remove unused font weights*/}

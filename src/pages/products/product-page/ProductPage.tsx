@@ -2,10 +2,10 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import {IProduct} from "@models/IProduct.ts";
+
 import Header from "@components/header/Header.tsx";
 import Footer from "@components/footer/Footer.tsx";
 
-import styles from './ProductPage.module.scss';
 import {ProductsService} from "@services/ProductsService.ts";
 import Rating from "@mui/material/Rating";
 import {FaHeart, FaStar} from "react-icons/fa";
@@ -15,9 +15,12 @@ import {MdCompareArrows} from "react-icons/md";
 import {BsBookmarkStar} from "react-icons/bs";
 import {HiOutlineArrowRight} from "react-icons/hi";
 
+import styles from './ProductPage.module.scss';
+
 export default function ProductPage() {
-    const [product, setProduct] = useState<IProduct | null>(null);
     const { id } = useParams();
+
+    const [product, setProduct] = useState<IProduct | null>(null);
 
     useEffect(() => {
         ProductsService.getProductById(id as string)
@@ -42,18 +45,40 @@ export default function ProductPage() {
                 <div className={styles.productContainer}>
                     <div className={styles.leftSideBox}>
                         <div className={styles.navBar}>
-                            <div className={styles.navItem}>Overview</div>
-                            <div className={styles.navItem}>Ingredient List</div>
-                            <div className={styles.navItem}>You should know</div>
-                            <div className={styles.navItem}>Ingredient info</div>
-                            <div className={styles.navItem}>Ingredients Overview</div>
-                            <div className={styles.navItem}>Ingredients Explained</div>
-                            <div className={styles.navItem}>When to use it</div>
-                            <div className={styles.navItem}>How to use it</div>
-                            <div className={styles.navItem}>Use it with</div>
-                            <div className={styles.navItem}>Don't use with</div>
-                            <div className={styles.navItem}>Review</div>
-                            <div className={styles.navItem}>Compared with</div>
+                            <a href='#overview'
+                               className={styles.navItem}>Overview</a>
+                            <a href='#ingredient-list'
+                               className={styles.navItem}>Ingredient
+                                List</a>
+                            <a href='#you-should-know'
+                               className={styles.navItem}>You
+                                should know</a>
+                            <a href='#ingredient-info'
+                               className={styles.navItem}>Ingredient
+                                info</a>
+                            <a href='#ingredients-overview'
+                               className={styles.navItem}>Ingredients
+                                Overview</a>
+                            <a href='#ingredients-explained'
+                               className={styles.navItem}>Ingredients
+                                Explained</a>
+                            <a href='#when-to-use-it'
+                               className={styles.navItem}>When
+                                to use it</a>
+                            <a href='#how-to-use-it'
+                               className={styles.navItem}>How
+                                to use it</a>
+                            <a href='#use-it-with'
+                               className={styles.navItem}>Use
+                                it with</a>
+                            <a href='#dont-use-with'
+                               className={styles.navItem}>Don't
+                                use with</a>
+                            <a href='#review'
+                               className={styles.navItem}>Review</a>
+                            <a href='#compared-with'
+                               className={styles.navItem}>Compared
+                                with</a>
                         </div>
                         <div className={styles.blockInfo}>
                             <h3>Track your products and build your routine with SkinSort.</h3>
@@ -63,7 +88,7 @@ export default function ProductPage() {
                     <div className={styles.productInfoContent}>
                         <div className={styles.productInfoBox}>
                             <div className={styles.productInfoImage}>
-                                <img src={product.image} alt='Image' />
+                                <img src={product.image} alt='Image'/>
                             </div>
                             <div className={styles.productInfo}>
                                 <h3>{product.title}</h3>
@@ -92,7 +117,8 @@ export default function ProductPage() {
                                 </div>
                                 <div className={styles.productActionsBox}>
                                     <div>
-                                        <BsBookmarkStar style={{color: "black"}} className={styles.productActionsBoxImage}/>
+                                        <BsBookmarkStar style={{color: "black"}}
+                                                        className={styles.productActionsBoxImage}/>
                                         Save
                                     </div>
                                     <div>
@@ -129,7 +155,7 @@ export default function ProductPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.productOverviewContent}>
+                        <div id='overview' className={styles.productOverviewContent}>
                             <span>Overview</span>
                             <div className={styles.productOverviewBoxes}>
                                 <div className={styles.productOverviewBox}>
@@ -164,8 +190,8 @@ export default function ProductPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.productIngredientsList}>
-                            <span>Ingredients List (11)</span>
+                        <div id='ingredient-list' className={styles.productIngredientsList}>
+                            <span>Ingredient List (11)</span>
                             <div className={styles.productIngredientsBoxes}>
                                 <div className={styles.productIngredientsBox}>Xanthan Gum</div>
                                 <div className={styles.productIngredientsBox}>Niacinamide</div>
