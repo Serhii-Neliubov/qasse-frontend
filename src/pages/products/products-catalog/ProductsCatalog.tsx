@@ -5,6 +5,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {ProductsService} from "@services/ProductsService.ts";
 
 import {IProduct} from "@models/IProduct.ts";
+import { ICategory } from "@models/ICategory.ts";
 import Footer from "@components/footer/Footer.tsx";
 import Header from "@components/header/Header.tsx";
 import Product from "./Product.tsx";
@@ -17,10 +18,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from "./ProductsCatalog.module.scss";
 
-interface ICategory {
-    id: string;
-    name: string;
-}
 
 export default function ProductsCatalog() {
     const [currentProductsPage, setCurrentProductsPage] = useState<number>(1);

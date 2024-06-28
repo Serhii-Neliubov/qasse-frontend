@@ -35,6 +35,20 @@
   }
 }
 
+@media (max-width: 700px) {
+  .title{
+    font-size: 32px;
+    margin: 0px 20px 15px;
+    text-align: center;
+  }
+  .subtitle{
+    font-size: 16px;
+    margin: 0px 20px;
+    text-align: center;
+  }
+
+}
+
 .productContainer {
   max-width: 1350px;
   margin: 0 auto;
@@ -56,6 +70,15 @@
     text-decoration: none;
     color: black;
   }
+}
+@media (max-width: 700px) {
+  .navBar{
+    display: none;
+  }
+  .blockInfo{
+    display: none;
+  }
+
 }
 
 .leftSideBox {
@@ -92,7 +115,20 @@
     object-fit: cover;
   }
 }
+@media (max-width: 971px) {
+  .leftSideBox{
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .leftSideBox{
+    display: none;
+  }
+  .blockInfo{
+    display: none;
+  }
 
+}
 .blockInfo {
   padding: 40px 30px;
   width: 370px;
@@ -124,6 +160,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .productInfoBox {
   display: flex;
   gap: 30px;
@@ -307,6 +344,155 @@
   color: black;
   font-size: 16px;
 }
+.productInfoBoxMiddle{
+  display: none;
+}
+@media (max-width: 700px) {
+  .productOverviewBoxes{
+    gap: 29px;
+  }
+  .productRatingMiddle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 34.89px;
+    margin: 0px 20px;
+    .productRatingBoxMiddle{
+      display: flex;
+      align-items: center;
+    }
+    .productIconsBoxMiddle{
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      .productIconBoxMiddle{
+        color: #555555;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .productUpdateBoxMiddle{
+    font-size: 20px;
+    color: #555555;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 30px;
+  }
+  .productInfoBoxMiddle{
+    display: block;
+  }
+  .productInfoBox{
+    display: none;
+  }
+  .productInfoImageMiddle{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 0px 60px;
+  }
+  .productContainer{
+    gap: 0;
+  }
+  .productInfoImageMiddle{
+    & > img{
+      width: 234px;
+      height: 282px;
+    }
+  }
+  .productActionsBoxImageMiddle{
+    width: 23px;
+    height: 30.75px;
+  }
+  .productActionsBoxMiddle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      cursor: pointer;
+      gap: 10px;
+      flex-direction: column;
+      width: 76px;
+      height: 76px;
+      border: 1px solid #E6E6E6;
+      margin-left: 20px;
+    }
+  }
+  .productInfoMiddle{
+    margin-top: 20px;
+    & > h3{
+        font-size: 32px;
+        font-family: "Cormorant Garamond", serif;
+        color: #3C164F;
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 21px;
+    }
+  }
+  .productInfoLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .productInfoLink {
+    display: flex;
+    width: 390px;
+    margin-top: 0;
+    background-color: #FDF6FF;
+    border: 1px solid #3C164F;
+    padding: 10px 15px;
+    cursor: pointer;
+    div{
+      margin-right: 100px;
+    }
+  }
+  .productOverviewContent {
+   width: 100%;
+   padding: 0px 20px;
+  
+    span {
+      font-size: 32px;
+      text-align: center;
+      font-family: "Cormorant Garamond", sans-serif;
+      color: #3C164F;
+      text-transform: uppercase;
+    }
+    .productOverviewBox{
+      gap: 0;
+      & > div{
+        padding: 0;
+        margin-bottom: 29px;
+      }
+      span {
+        font-size: 20px;
+      }
+      p {
+        padding: 0;
+        text-align: start;
+        font-size: 16px;
+      }
+    }
+  }
+  .productIngredientsList{
+    padding: 50px 20px 0px;
+    span{
+      font-size: 32px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .productIngredientsBoxes{
+      width: 100%;
+      padding:20px;
+    }
+  }
+}
 
 .navItemActive {
   background-color: #FDF6FF;
@@ -347,5 +533,30 @@
     color: black;
     font-family: Poppins, sans-serif;
     font-size: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .ingredientInfo{
+    gap: 0;
+    span{
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    p{
+      font-size: 16px;
+      color: #000000;
+      margin: 0px 20px 30px;
+    }
+    .ingredientsInfoList{
+      text-align: center;
+      gap: 0px;
+      margin-left: 36px;
+      div{
+        margin-left: 30px;
+        white-space: nowrap;
+        margin-bottom: 21px;
+      }
+    }
   }
 }

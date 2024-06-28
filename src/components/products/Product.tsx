@@ -9,7 +9,7 @@ export default function Product({product}: any) {
 
     return (
         <div key={product.id} onClick={() => productClickHandler(product.id)}>
-            <h1>{product.title}</h1>
+            <h1>фыв</h1>
         </div>
     )
 }

@@ -20,7 +20,7 @@ import {SiTicktick} from "react-icons/si";
 
 export default function ProductPage() {
     const { id } = useParams();
-
+    
     const [product, setProduct] = useState<IProduct | null>(null);
 
     useEffect(() => {
@@ -131,6 +131,75 @@ export default function ProductPage() {
                                         Compare
                                     </div>
                                 </div>
+                                <div className={styles.productInfoLinks}>
+                                    <div className={styles.productInfoLink}>
+                                        <div>
+                                            <span>For you</span>
+                                            <p>Lorem ipsum dolor sit ame</p>
+                                        </div>
+                                        <HiOutlineArrowRight style={{width: '30px', height: '30px'}}/>
+                                    </div>
+                                    <div className={styles.productInfoLink}>
+                                        <div>
+                                            <span>Dupes</span>
+                                            <p>Lorem ipsum dolor sit ame</p>
+                                        </div>
+                                        <HiOutlineArrowRight style={{width: '30px', height: '30px'}}/>
+                                    </div>
+                                    <div className={styles.productInfoLink}>
+                                        <div>
+                                            <span>Shop</span>
+                                            <p>Lorem ipsum dolor sit ame</p>
+                                        </div>
+                                        <HiOutlineArrowRight style={{width: '30px', height: '30px'}}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.productInfoBoxMiddle}>
+                            <div className={styles.productInfoImageMiddle}>
+                                <img src={product.image} alt='Image'/>
+                                <div className={styles.productActionsBoxMiddle}>
+                                    <div>
+                                        <BsBookmarkStar style={{color: "black"}}
+                                                        className={styles.productActionsBoxImageMiddle}/>
+                                        Save
+                                    </div>
+                                    <div>
+                                        <FaStar style={{color: '#FFC107'}} className={styles.productActionsBoxImageMiddle} />
+                                        Rate
+                                    </div>
+                                    <div>
+                                        <MdCompareArrows style={{color: "black"}} className={styles.productActionsBoxImageMiddle}/>
+                                        Compare
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.productInfoMiddle}>
+                                <h3>{product.title}</h3>
+                                <div className={styles.productRatingMiddle}>
+                                    <div className={styles.productRatingBoxMiddle}>
+                                        <Rating name="read-only" value={5} readOnly/>
+                                        (05)
+                                    </div>
+                                    <div className={styles.productIconsBoxMiddle}>
+                                        <div className={styles.productIconBoxMiddle}>
+                                            <FaHeart/>
+                                            494
+                                        </div>
+                                        <div className={styles.productIconBoxMiddle}>
+                                            <SlPresent/>
+                                            179
+                                        </div>
+                                        <div className={styles.productIconBoxMiddle}>
+                                            <TfiCup/>
+                                            176
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.productUpdateBoxMiddle}>
+                                        Updated on July 18, 2023
+                                    </div>
                                 <div className={styles.productInfoLinks}>
                                     <div className={styles.productInfoLink}>
                                         <div>

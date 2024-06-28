@@ -1,5 +1,5 @@
 export interface IProduct {
-  id: number,
+  id: string,
   title: string,
   brand_name: string,
   description: string,
@@ -11,6 +11,6 @@ export interface IProduct {
   discount_price: string,
   clicks: number,
   website_from: string,
-  category_id: number,
+  category_id: string,
   reviews: string[],
 }
