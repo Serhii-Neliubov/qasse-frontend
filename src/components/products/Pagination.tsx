@@ -1,6 +1,5 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight} from "react-icons/md";
-import {ProductsService} from "../../services/ProductsService.ts";
 
 interface PaginationProps {
     currentPage: number;
@@ -8,13 +7,13 @@ interface PaginationProps {
 }
 
 export default function Pagination({currentPage, setCurrentPage}: PaginationProps) {
-    const [totalPages, setTotalPages] = useState<number>(5);
+    const [totalPages, ] = useState<number>(5);
 
-    useEffect(() => {
-        ProductsService.getTotalPages('')
-            .then((totalPages) => setTotalPages(totalPages))
-            .catch((error) => console.error(error));
-    }, []);
+    // useEffect(() => {
+    //     ProductsService.getTotalPages('')
+    //         .then((totalPages) => setTotalPages(totalPages))
+    //         .catch((error) => console.error(error));
+    // }, []);
 
     return (
         <div>
