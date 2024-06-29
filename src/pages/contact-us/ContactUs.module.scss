@@ -30,7 +30,7 @@
     border: none;
 }
 
-.textarea {
+.textarea {    
     padding: 22px 30px;
     font-size: 18px;
     outline: none;
@@ -68,14 +68,51 @@
     border: none;
     cursor: pointer;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1391px) {
+    .content{
+        & > img{
+            width: 466.67px;
+        }
+    }
+    .title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .subtitle{
+        font-size: 12px; 
+        margin-bottom: 17px;
+    }
+    .form{
+        margin-right: 112px;
+        width: 360px;
+        gap: 0;
+        & > input{
+            width: 385px;
+            margin-bottom: 9px;
+            font-size: 12px;
+            height: 44px;
+            padding: 7px 18px;
+        }
+    }
+    .textarea{
+        width: 385px;
+        height: 116px;
+        font-size: 12px;
+        padding: 22px 20px;
+        margin-bottom: 18px;
+    }
+    .button{
+        width: 385px;
+    }
+  }
+@media (max-width: 1020px) {
         .content{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         & > img{
-            width: 100%;
+            width: 80%;
         }
     }
     .bgLabel{
@@ -86,11 +123,16 @@
 
   
   @media (max-width: 576px) {
+    .content{
+        margin-left: 50px;
+    }
     .title{
         font-size: 32px;
+        margin-left: 50px;
     }
     .subtitle{
         font-size: 16px;
+        margin-left: 50px;
     }
     .button{
         max-width: 390px;

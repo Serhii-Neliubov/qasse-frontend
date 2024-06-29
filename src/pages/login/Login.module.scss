@@ -117,11 +117,60 @@
   font-size: 16px;
   font-weight: 500;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1391px) {
+  .rightParticlesImg{
+    width: 359px;
+  }
+  .leftParticlesImg{
+    width: 266px;
+  }
+  .leftBParticlesImg{
+    width: 429px;
+  }
+  .flowersImg{
+    width: 183px;
+  }
+  .forgotPasswordLink{
+    font-size: 12px;
+  }
+  .link{
+    font-size: 10px;
+  }
+
+  .form{
+    margin-right: 112px;
+    width: 360px;
+    gap: 0;
+    & > button{
+      padding: 5px 136.5px;
+      width: 306px;
+    }
+    & > input{
+      width: 306px;
+    }
+    & > img{
+      width: 119px;
+      margin: 0;
+    }
+    & > h1{
+      font-size: 30px;
+    }
+    .alreadyHaveAnAccount{
+      & > span{
+        font-size: 10px;
+      }
+    }
+  }
+  .personImg{
+    width: 530px;
+  }
+}
+@media (max-width: 1020px) {
   .personImg{
     position: static;
     z-index: 5;
     align-items: center;
+    margin: 0 auto;
   }
   .block{
     position: absolute;

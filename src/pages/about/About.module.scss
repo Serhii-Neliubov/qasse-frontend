@@ -31,7 +31,7 @@
   display: none;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1021px) {
   .heroContent{
     display: flex;
     flex-direction: column;
@@ -65,7 +65,37 @@
   top: -15px;
   right: -120px;
 }
-
+@media (max-width: 1370px) {
+  .heroText{
+    h1{
+      font-size: 40px;
+      margin-left: 60px;
+    }
+    p{     
+      width: 526px;
+      font-size: 14px;
+      margin-left: 60px;
+    }
+  }
+  .heroImg3{
+    right: 280px;
+    width: 180px;
+  }
+  .heroImg1{
+    width: 167px;
+    top: 274px;
+  }
+  .heroImg2{
+    top: 40px;
+    right: 140px;
+    width: 180px;
+    height: 299px;
+  }
+  .healthyWide{
+    width: 423px;
+    margin-left: 60px;
+  }
+}
 .healthyContainer {
   background-color: white;
 }
@@ -112,7 +142,37 @@
     margin-bottom: 20px;
   }
 }
-@media (max-width: 1350px) {
+@media (max-width: 1370px) {
+  .healthyContent{
+    gap: 10px;
+    padding-bottom: 142px;
+  }
+  .healthyWide{
+    width: 423px;
+    margin-left: 60px;
+  }
+  .healthyTitle {
+    & > div {
+      padding-right: 50px;
+      font-size: 45px;
+      gap: 10px;
+      & > img {
+        width: 112px;
+      }
+    }
+
+  }
+  .healthyText {
+    & > p {
+      font-size: 14px;
+    }
+  }
+  .healthyParagraph{
+    font-size: 14px;
+    margin-right: 52px;
+  }
+}
+@media (max-width: 1021px) {
   .healthyContent{
     flex-direction: column;
     padding: 30px 0px;
@@ -237,7 +297,35 @@
     font-family: Poppins, sans-serif;
   }
 }
-@media (max-width: 1350px) {
+@media (max-width: 1370px) {
+  .glowIntelligentlyContainer{
+    padding-top: 30px;
+  }
+  .glowIntelligentlyImg1{
+    width: 439.58px;
+    margin-right: 52px;
+  }
+  .glowIntelligentlyContent{
+    & > h3{
+      font-size: 200px;
+      left: 150px;
+    }
+  .glowIntelligentlyText{
+    & > h2{
+      font-size: 45px;
+      margin-left: 60px;
+    }
+    & > p{
+      font-size: 14px;
+      margin-left: 60px;
+    }
+    & > button{
+      margin-left: 60px;
+    }
+  }
+}
+}
+@media (max-width: 1021px) {
   .glowIntelligentlyContainer{
     padding-top: 30px;
   }
@@ -432,8 +520,48 @@
         text-align: center;
     }
 }
-
-@media (max-width: 1180px) {
+@media (max-width: 1370px) {
+  .surfaceLevelText{
+    & > h2{
+      font-size: 40px;
+      width: 711px;
+    }
+    & > p{
+      width: 545px;
+      font-size: 14px;
+      margin: 0 auto;
+    }
+  }
+  .surfaceLevelBlock{
+    width: 23%;
+    margin-right: 52px;
+  }
+  .surfaceLevelBlocks{
+    width: 80%;
+    gap: 14px;
+    flex-wrap: nowrap;
+    margin-left: 60px;
+  }
+  .surfaceLevelBlockContent{
+    & > p{
+      font-size: 15px;
+      width: 100%;
+      margin-right: 52px;
+    }
+    & > div{
+      & > img{
+        margin-left: 20px;
+        width: 42px;
+      }
+    }
+  }
+  .joinOurCommunityContent{
+    width: 90%;
+    padding: 19px 40px;
+    height: 250px;
+  }
+}
+@media (max-width: 1021px) {
   p{
     font-size: 20px;
   }
@@ -492,6 +620,7 @@
     display: none;
   }
   .healthyMiddle {
+    width: 500px;
     display: block;
   }
   .heroContent {
@@ -551,9 +680,11 @@
     justify-content: start;
     width: 100%;
     .heroImg2{
+      margin-left: 60px;
       width: 276px;
     } .heroImg3{
       width: 276px;
+      margin-left: 60px;
     } .heroImg1{
       width: 350px;
 
@@ -603,7 +734,26 @@
     display: none;
   }
 }
-@media (max-width: 805px) {
+@media (max-width: 1370px) {
+  .skincareOptimizerText{
+    & > h2{
+      font-size: 40px;
+      margin-left: 60px;
+    }
+    & > p{
+      width: 541px;
+      font-size: 15px;
+      margin-left: 60px;
+      text-align: start;
+    }
+  }
+  .skincareOptimizerContent{
+    & > button{
+      margin-right: 52px;
+    }
+  }
+}
+@media (max-width: 1021px) {
   .glowIntelligentlyMiddleImg1{
     margin-left: 0;
   }
@@ -632,6 +782,10 @@
     & > h1{
       font-size: 32px;
       text-align: center;
+      margin: 0 0 15px 0;
+    }
+    & > p{
+      width: 390px;
     }
   }
   .heroContentImg{
@@ -641,6 +795,7 @@
       width: 150px;
     } .heroImg3{
       width: 150px;
+      top: 200px;
     } .heroImg4{
       position: static;
     }
@@ -682,24 +837,31 @@
   .surfaceLevelText{
     padding: 0px 10px;
     & > h2{
+      width: 389px;
       font-size: 32px;
       font-weight: 700;
+    }
+    & > p{
+      width: 390px;
     }
   }
   .healthyContent {
     padding-bottom: 0;
   }
     .surfaceLevelBlocks {
-      width: 390px;
+      width: 80%;
       box-sizing: border-box;
     }
     .surfaceLevelBlockContent{
       justify-content: space-between;
+      align-items: center;
       padding: 0;
       & > img{
         width: 62px;
       }
       & > p{
+        text-align: start;
+        margin-left: 50px;
         font-size: 14px;
       }
     }
@@ -760,5 +922,10 @@
     .joinOurCommunityContent {
       flex-direction: column;
       height: 295px;
+    }
+    .healthyTitle {
+      & > img {
+        display: none;
+      }
     }
 }
