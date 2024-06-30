@@ -1,9 +1,12 @@
 import $api from "@utils/interceptors.ts";
+// <<<<<<< HEAD
 
 
 
 
 
+// =======
+// >>>>>>> main
 
 export class ProductsService {
     static async getProducts(size: number, page: number, category_id?: string[]) {

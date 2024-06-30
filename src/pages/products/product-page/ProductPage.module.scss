@@ -34,7 +34,16 @@
     left: 0;
   }
 }
-
+@media (max-width: 1280px) {
+  .title{
+    font-size: 40px;
+    margin-left: 60px;
+  }
+  .subtitle{
+    font-size: 14px;
+    margin-left: 60px;
+  }
+}
 @media (max-width: 700px) {
   .title{
     font-size: 32px;
@@ -71,6 +80,25 @@
     color: black;
   }
 }
+
+.leftSideBox {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1280px) {
+  .leftSideBox{
+    margin-left: 60px;
+    max-width: 296px;
+    .navBar{
+    gap: 8px;
+    .navItem{
+      font-size: 10px;
+      padding: 5px 12px;
+    }
+  }
+}
+}
 @media (max-width: 700px) {
   .navBar{
     display: none;
@@ -79,12 +107,6 @@
     display: none;
   }
 
-}
-
-.leftSideBox {
-  width: 370px;
-  display: flex;
-  flex-direction: column;
 }
 
 .navItem {
@@ -153,6 +175,18 @@
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+  }
+}
+@media (max-width: 1280px) {
+  .blockInfo{
+    max-width: 296px;
+    padding: 32px 24px;
+    & > h3{
+      font-size: 25px;
+    }
+    & > button{
+      font-size: 14px;
+    }
   }
 }
 .productInfo{
@@ -347,6 +381,103 @@
 .productInfoBoxMiddle{
   display: none;
 }
+@media (max-width: 1280px) {
+  .productInfoImage{
+    height: 219px;
+  }
+  .productInfoBox{
+    gap: 20px;
+  }
+  .productInfo{
+    & > h3{
+      font-size: 26px;
+      max-width: 383px;
+    }
+    .productRating{
+      margin-top: 10px;
+      .productRatingBox{
+        max-width: 98px;
+        font-size: 10px;
+        .productRatingBoxStar{
+          font-size: 11.64px;
+        }
+  
+      }
+    }
+    .productUpdateBox{
+      font-size: 8px;
+    }
+    .productIconsBox{
+      gap: 20px;
+      font-size: 10px;
+      .productIconBox1{
+        width: 11.46px;
+      }
+    }
+  }
+  .productActionsBox{
+    margin-top: 10px;
+    gap: 12px;
+    padding: 0;
+    & > div{
+      gap: 0;
+      padding: 0;
+      width: 47px;
+      height: 48px;
+      font-size: 8px;
+      .productActionsBoxImage{
+        width: 11.48px;
+      }
+    }
+  }
+  .productInfoLinks{
+    gap: 10px;
+    .productInfoLink{
+      width: 120px;
+      padding: 0 12px;
+      & > div{
+        & > span{
+          font-size: 20px;
+        }
+        & > p{
+          font-size: 6px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .productOverviewContent{
+    padding-right: 52px;
+    margin-top: 32px;
+    & > span{
+      font-size: 24px;
+    }
+    .productOverviewBoxes{
+      padding: 8px 10px;
+      .productOverviewBox{
+        & > p{
+          font-size: 12px;
+        }
+        & > div{
+          & > span{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .productIngredientsList{
+    & > span{
+      font-size: 24px;
+    }
+    .productIngredientsBox{
+      font-size: 8px;
+    }
+  }
+}
 @media (max-width: 700px) {
   .productOverviewBoxes{
     gap: 29px;
@@ -357,7 +488,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 34.89px;
-    margin: 0px 20px;
+    margin: 0px 50px;
     .productRatingBoxMiddle{
       display: flex;
       align-items: center;
@@ -441,22 +572,32 @@
     flex-direction: column;
     gap: 15px;
   }
-  .productInfoLink {
-    display: flex;
-    width: 390px;
-    margin-top: 0;
-    background-color: #FDF6FF;
-    border: 1px solid #3C164F;
-    padding: 10px 15px;
-    cursor: pointer;
-    div{
-      margin-right: 100px;
+  .productInfoLinks{
+    .productInfoLink {
+      padding: 10px 15px;
+      justify-content: space-between;
+      display: flex;
+      width: 390px;
+      margin-top: 0;
+      background-color: #FDF6FF;
+      border: 1px solid #3C164F;
+      padding: 10px 15px;
+      cursor: pointer;
+      div{
+        margin-right: 100px;
+        & > span{
+          font-size: 24px;
+        }
+        & > p{
+          font-size: 10px;
+        }
+      }
     }
   }
   .productOverviewContent {
    width: 100%;
    padding: 0px 20px;
-  
+
     span {
       font-size: 32px;
       text-align: center;
@@ -464,19 +605,21 @@
       color: #3C164F;
       text-transform: uppercase;
     }
-    .productOverviewBox{
-      gap: 0;
-      & > div{
-        padding: 0;
-        margin-bottom: 29px;
-      }
-      span {
-        font-size: 20px;
-      }
-      p {
-        padding: 0;
-        text-align: start;
-        font-size: 16px;
+    .productOverviewBoxes{
+      .productOverviewBox{
+        gap: 0;
+        & > div{
+          padding: 0;
+          margin-bottom: 24px;
+          & > span {
+            font-size: 20px;
+          }
+        }
+        & > p {
+          padding: 0;
+          text-align: start;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -490,6 +633,9 @@
     .productIngredientsBoxes{
       width: 100%;
       padding:20px;
+      .productIngredientsBox{
+        font-size: 16px;
+      }
     }
   }
 }
@@ -535,6 +681,25 @@
     font-size: 18px;
   }
 }
+@media (max-width: 1280px) {
+  .ingredientInfo{
+    padding-top: 20px;
+    & > span{
+      font-size: 24px;
+  
+    }
+    & > p{
+      font-size: 14px;
+      
+    }
+    .ingredientsInfoList{
+      & > div{
+        font-size: 14px;
+      }
+    }
+  }
+
+}
 @media (max-width: 700px) {
   .ingredientInfo{
     gap: 0;
@@ -553,9 +718,10 @@
       gap: 0px;
       margin-left: 36px;
       div{
-        margin-left: 30px;
+        width: 50%;
         white-space: nowrap;
         margin-bottom: 21px;
+        font-size: 16px;
       }
     }
   }

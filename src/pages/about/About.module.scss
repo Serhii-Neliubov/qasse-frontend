@@ -785,14 +785,21 @@
       margin: 0 0 15px 0;
     }
     & > p{
-      width: 390px;
+      width: 340px;
+      margin-left: 0;
+      margin-right: 20px;
     }
+  }
+  .healthyParagraph {
+    max-width: 390px;
+    margin: 0 auto;
   }
   .heroContentImg{
     justify-content: start;
     width: 100%;
     .heroImg2{
       width: 150px;
+      margin-left: -30px;
     } .heroImg3{
       width: 150px;
       top: 200px;
@@ -804,7 +811,9 @@
     width: 200px;
   }
   .healthyTitle{
-    padding: 0px 20px;
+    width: 90%;
+    margin-bottom: 44px;
+    padding: 0px 100px;
     & > div  {
       font-size: 24px;
       width: 368px;
@@ -813,12 +822,17 @@
   .healthyMiddle{
     max-width: 390px;
   }
+  .glowIntelligentlyContent{
   .glowIntelligentlyText{
     padding: 0px 20px;
+    margin: 0;
     & > h2{
       text-align: center;
       font-size: 32px;
       margin: 0 auto;
+    }
+    & > p{
+      margin: 0 auto ;
     }
     .glowIntelligentlyMiddleImg1{
       width: 317.38px;
@@ -831,9 +845,11 @@
       font-family: "Cormorant Garamond", sans-serif;
     }
     & > button {
-      margin-top: 54px;
+      margin-top: 30px;
+      margin-left: 0;
     }
   }
+}
   .surfaceLevelText{
     padding: 0px 10px;
     & > h2{
@@ -849,27 +865,38 @@
     padding-bottom: 0;
   }
     .surfaceLevelBlocks {
-      width: 80%;
+      width: 90%;
       box-sizing: border-box;
     }
     .surfaceLevelBlockContent{
       justify-content: space-between;
       align-items: center;
       padding: 0;
-      & > img{
-        width: 62px;
+      gap: 10px;
+      .surfaceLevelBlockImg{
+        & > img{
+          width: 62px;
+          margin-right: 20px;
+        }
       }
       & > p{
         text-align: start;
-        margin-left: 50px;
+        margin-left: 60px;
         font-size: 14px;
+        margin-right: 20px;
       }
     }
     .skincareOptimizerText{
       padding: 0px 20px;
       & > h2{
+        margin-left: 0;
         text-align: center;
         font-size: 32px;
+      }
+      & > p{
+        max-width: 350px;
+        text-align: center;
+        margin-left: 0;
       }
     }
     .joinOurCommunityText{
@@ -926,6 +953,11 @@
     .healthyTitle {
       & > img {
         display: none;
+      }
+    }
+    .skincareOptimizerContent{
+      & > button{
+        margin-right: 0;
       }
     }
 }

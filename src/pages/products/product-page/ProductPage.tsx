@@ -95,20 +95,20 @@ export default function ProductPage() {
                                 <h3>{product.title}</h3>
                                 <div className={styles.productRating}>
                                     <div className={styles.productRatingBox}>
-                                        <Rating name="read-only" value={5} readOnly/>
+                                        <Rating name="read-only" value={5} readOnly className={styles.productRatingBoxStar}/>
                                         (05)
                                     </div>
                                     <div className={styles.productIconsBox}>
                                         <div className={styles.productIconBox}>
-                                            <FaHeart/>
+                                            <FaHeart className={styles.productIconBox1}/>
                                             494
                                         </div>
                                         <div className={styles.productIconBox}>
-                                            <SlPresent/>
+                                            <SlPresent className={styles.productIconBox1}/>
                                             179
                                         </div>
                                         <div className={styles.productIconBox}>
-                                            <TfiCup/>
+                                            <TfiCup className={styles.productIconBox1}/>
                                             176
                                         </div>
                                     </div>

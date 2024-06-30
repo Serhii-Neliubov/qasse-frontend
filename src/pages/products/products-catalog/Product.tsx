@@ -28,10 +28,17 @@ export default function Product({product, categories}: IProductProps) {
         <img src={product.image} alt='Image' />
       </div>
       <div className={styles.productsCatalogBlockInfo}>
+        <div className={styles.productsCatalogCategoryMiddle}>
+          <div className={styles.productsCatalogCategoryMid}>{productCategory}</div>
+          <div className={styles.productsCatalogBlockPriceMid}>
+            See prices:
+            <span> ${product.sell_price}</span>
+          </div>
+        </div>
         <div className={styles.productsCatalogCategory}>{productCategory}</div>
         <h2 className={styles.productsCatalogTitle}>{product.title}</h2>
         <div className={styles.productsCatalogRating}>
-          <Rating name="read-only" value={5} readOnly />
+          <Rating name="read-only" value={5} readOnly className={styles.productsCatalogRatingStar}/>
           <span>(05)</span>
         </div>
         <p>{product.description}</p>

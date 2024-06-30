@@ -24,6 +24,7 @@ export default function ProductsCatalog() {
     const [products, setProducts] = useState<IProduct[]>([]);
     const [categories, setCategories] = useState<ICategory[]>([]);
     const [filters, setFilters] = useState<string[]>([]);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const getProducts = async () => {
         try {
@@ -33,7 +34,6 @@ export default function ProductsCatalog() {
             console.error(error);
         }
     }
-
     const getCategories = async () => {
         try {
             return await ProductsService.getProductCategories();
@@ -53,6 +53,12 @@ export default function ProductsCatalog() {
             .then(categories => setCategories(categories))
             .catch(error => console.error(error));
     }, []);
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+    
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
 
     return (
         <>
@@ -78,13 +84,18 @@ export default function ProductsCatalog() {
                                   </button>
                               </div>
                               <div className={styles.productsCatalogSwiper}>
-                                  <Swiper
+                              <Swiper
                                     modules={[Navigation, Pagination, A11y]}
                                     spaceBetween={33}
                                     pagination={{ clickable: true }}
-                                    slidesPerView={7}
+                                    slidesPerView={
+                                    windowWidth < 576 ? 1.5 :
+                                    windowWidth < 1024 ? 3 :
+                                    windowWidth < 1370 ? 5 :
+                                    7
+                                    }
                                     className={styles.productsSwiper}
-                                  >
+                                >
                                       <SwiperSlide className={styles.productsSwiperSlide}>
                                           <img src={productImg} alt='Image'/>
                                       </SwiperSlide>
