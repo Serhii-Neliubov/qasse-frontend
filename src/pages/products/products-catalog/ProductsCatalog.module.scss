@@ -392,10 +392,17 @@
         }
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 993px) {
     .filterBlocks{
         display: none;
     }
+    .productsCatalogText{
+        & > h2{
+            margin-left: 60px;
+        }
+    }
+}
+@media (max-width: 700px) {
     .productsCatalogText{
         & > h2{
             display: none;
